@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Passion to Profit – Workshop F&B 2 ngày online với Vũ Kiều Loan. Bạn có phù hợp để kinh doanh nhà hàng không? Chỉ 499.000 VNĐ, chỉ 30 chỗ." />
+  <title>Passion to Profit – Workshop F&B | Coach Loan Vũ</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Dark theme overrides ── */
+    html,
+    body {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+
+    body {
+      background: #1a1a1a;
+      color: #fff;
+    }
+
+    /* Prevent section headings from bleeding between sections */
+    .p2p-section {
+      overflow: hidden;
+    }
+
+    :root {
+      --p2p-gold: #F5A623;
+      --p2p-red: #CC0000;
+      --p2p-dark: #1a1a1a;
+      --p2p-dark2: #111111;
+      --p2p-card: rgba(255, 255, 255, 0.06);
+      --p2p-border: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Override shared heading color */
+    h1,
+    h2,
+    h3 {
+      color: var(--p2p-gold);
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .site-header {
+      background: #111;
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-logo {
+      color: var(--p2p-gold);
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--p2p-gold);
+    }
+
+    .nav-links a::after {
+      background: var(--p2p-gold);
+    }
+
+    .site-footer {
+      background: #0d0d0d;
+    }
+
+    .badge {
+      background: rgba(245, 166, 35, 0.15);
+      color: var(--p2p-gold);
+    }
+
+    /* ── Shared section ── */
+    .p2p-section {
+      padding-block: var(--space-20);
+      background: var(--p2p-dark);
+    }
+
+    .p2p-section.alt {
+      background: var(--p2p-dark2);
+    }
+
+    /* ── Sticky CTA bar ── */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: var(--p2p-red);
+      padding: var(--space-3) var(--space-6);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .sticky-cta-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sticky-cta-title {
+      color: #fff;
+      margin: 0;
+      font-weight: 700;
+      font-size: var(--text-base);
+    }
+
+    .sticky-cta-meta {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: var(--text-sm);
+      margin-top: 2px;
+    }
+
+    .sticky-cta .btn {
+      background: var(--p2p-gold);
+      color: #1a1a1a;
+      padding: var(--space-2) var(--space-6);
+      font-size: var(--text-sm);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .sticky-cta .btn:hover {
+      background: #e6a220;
+    }
+
+    @media(max-width:768px) {
+      .sticky-cta {
+        padding: var(--space-2) var(--space-4);
+      }
+
+      .sticky-cta-title {
+        font-size: var(--text-sm);
+        line-height: 1.4;
+      }
+
+      .sticky-cta-meta {
+        font-size: 0.75rem;
+        white-space: normal;
+      }
+
+      .sticky-cta .btn {
+        padding: 6px 16px;
+        font-size: var(--text-xs);
+      }
+    }
+
+    @media(max-width:640px) {
+      .sticky-cta {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .sticky-cta-info {
+        width: 100%;
+        align-items: center;
+      }
+    }
+
+    @media(max-width:480px) {
+      .p2p-section {
+        padding-inline: var(--space-4);
+      }
+
+      .container {
+        padding-inline: var(--space-4);
+      }
+
+      .hero-p2p {
+        padding-inline: var(--space-4);
+      }
+
+      .btn-cta-final {
+        font-size: var(--text-base);
+        padding: var(--space-4) var(--space-6);
+        width: 90%;
+        max-width: 320px;
+      }
+
+      .cta-quote {
+        padding-inline: var(--space-4);
+      }
+
+      .faq-q {
+        padding: var(--space-3) var(--space-4);
+        font-size: var(--text-base);
+      }
+
+      .faq-a {
+        padding: 0 var(--space-4);
+      }
+    }
+
+    /* ── Hero ── */
+    .hero-p2p {
+      min-height: calc(100vh - 72px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: var(--space-8);
+      padding-block: var(--space-12);
+      background:
+        radial-gradient(ellipse at 15% 55%, rgba(139, 26, 26, 0.75) 0%, transparent 55%),
+        radial-gradient(ellipse at 85% 20%, rgba(60, 10, 10, 0.4) 0%, transparent 50%),
+        #111111;
+    }
+
+    .hero-p2p-img {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-p2p-img::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 35%;
+      background: linear-gradient(to top, #111111 0%, transparent 100%);
+      pointer-events: none;
+      border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    }
+
+    .hero-p2p-img img {
+      width: min(420px, 100%);
+      height: auto;
+      border-radius: var(--radius-lg);
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .coach-label {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      background: var(--p2p-red);
+      color: #fff;
+      padding: var(--space-2) var(--space-4);
+      border-radius: var(--radius-md);
+      font-size: var(--text-sm);
+      font-weight: 700;
+    }
+
+    .hero-p2p-title {
+      font-size: clamp(2rem, 8vw, 5.5rem);
+      font-family: var(--font-heading);
+      line-height: 1.1;
+      color: #fff;
+      margin: 0;
+    }
+
+    .hero-p2p-title span {
+      color: var(--p2p-red);
+    }
+
+    .hero-tagline {
+      font-size: var(--text-xl);
+      font-style: italic;
+      color: var(--p2p-gold);
+      margin: var(--space-4) 0;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+      margin: var(--space-6) 0;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--text-lg);
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .meta-item svg {
+      color: var(--p2p-gold);
+      flex-shrink: 0;
+    }
+
+    .price-badge {
+      display: inline-block;
+      background: var(--p2p-gold);
+      color: #1a1a1a;
+      font-family: var(--font-heading);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      padding: var(--space-2) var(--space-6);
+      border-radius: var(--radius-full);
+      margin-bottom: var(--space-4);
+    }
+
+    .scholarship-note {
+      font-size: var(--text-sm);
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: var(--space-3);
+    }
+
+    .scholarship-note strong {
+      color: var(--p2p-gold);
+    }
+
+    .btn-p2p-cta {
+      background: var(--p2p-red);
+      color: #fff;
+      font-size: var(--text-lg);
+      padding: var(--space-4) var(--space-10);
+    }
+
+    .btn-p2p-cta:hover {
+      background: #aa0000;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(204, 0, 0, 0.4);
+    }
+
+    @media(max-width:768px) {
+      .hero-p2p {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: var(--space-8);
+      }
+
+      .hero-p2p-img {
+        order: -1;
+      }
+
+      .hero-p2p-img img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-position: top;
+      }
+
+      .meta-row {
+        justify-content: center;
+      }
+    }
+
+    /* ── Credibility ── */
+    .cred-img-wrap {
+      border: 3px solid var(--p2p-gold);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      max-width: 720px;
+      margin-inline: auto;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .cred-img-wrap img {
+      width: 100%;
+      display: block;
+    }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-6);
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: var(--space-6);
+      background: var(--p2p-card);
+      border: 1px solid var(--p2p-border);
+      border-radius: var(--radius-lg);
+    }
+
+    .stat-card .stat-num {
+      font-family: var(--font-heading);
+      font-size: var(--text-4xl);
+      color: var(--p2p-gold);
+    }
+
+    .stat-card .stat-label {
+      font-size: var(--text-sm);
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: var(--space-2);
+    }
+
+    @media(max-width:768px) {
+      .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* ── Target audience ── */
+    .target-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-4);
+    }
+
+    .target-card {
+      background: var(--p2p-card);
+      border: 1px solid var(--p2p-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      border-left: 4px solid var(--p2p-red);
+    }
+
+    .target-num {
+      font-family: var(--font-heading);
+      font-size: var(--text-3xl);
+      color: var(--p2p-red);
+      opacity: 0.4;
+      line-height: 1;
+      margin-bottom: var(--space-2);
+    }
+
+    .target-card p {
+      font-size: var(--text-sm);
+      margin: 0;
+    }
+
+    .target-card strong {
+      color: var(--p2p-gold);
+    }
+
+    @media(max-width:1024px) {
+      .target-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width:600px) {
+      .target-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── Benefits ── */
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-4);
+    }
+
+    .benefit-card {
+      background: var(--p2p-card);
+      border: 1px solid var(--p2p-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+    }
+
+    .benefit-icon {
+      font-size: 2rem;
+      margin-bottom: var(--space-3);
+    }
+
+    .benefit-card h3 {
+      font-size: var(--text-base);
+      color: var(--p2p-red);
+      margin-bottom: var(--space-2);
+      font-family: var(--font-body);
+      font-weight: 700;
+    }
+
+    .benefit-card p {
+      font-size: var(--text-sm);
+      margin: 0;
+    }
+
+    @media(max-width:1024px) {
+      .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width:768px) {
+      .benefit-card {
+        padding: var(--space-4);
+      }
+
+      .target-card {
+        padding: var(--space-4);
+      }
+
+      .stat-card {
+        padding: var(--space-4);
+      }
+    }
+
+    @media(max-width:600px) {
+      .benefit-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── Modules ── */
+    .modules-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .module-card {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: var(--space-6);
+      align-items: start;
+      background: var(--p2p-card);
+      border: 1px solid var(--p2p-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+    }
+
+    .module-label {
+      background: var(--p2p-red);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      padding: var(--space-2) var(--space-4);
+      border-radius: var(--radius-md);
+      text-align: center;
+      white-space: nowrap;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      letter-spacing: 0.05em;
+    }
+
+    .module-card h3 {
+      font-size: var(--text-xl);
+      color: var(--p2p-gold);
+      margin-bottom: var(--space-3);
+      font-family: var(--font-heading);
+    }
+
+    .module-card p {
+      font-size: var(--text-sm);
+      margin: 0;
+    }
+
+    @media(max-width:768px) {
+      .module-card {
+        padding: var(--space-4);
+        gap: var(--space-4);
+      }
+    }
+
+    @media(max-width:600px) {
+      .module-card {
+        grid-template-columns: 1fr;
+      }
+
+      .module-label {
+        writing-mode: horizontal-tb;
+        transform: none;
+        width: fit-content;
+      }
+    }
+
+    /* ── Testimonials ── */
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+      margin-bottom: var(--space-10);
+    }
+
+    .testi-card {
+      background: var(--p2p-card);
+      border: 1px solid var(--p2p-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .testi-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .testi-img-wrap {
+      width: 100%;
+      aspect-ratio: 4/5;
+      overflow: hidden;
+      margin-bottom: 0;
+    }
+
+    .testi-body {
+      padding: 20px 24px 24px;
+      flex: 1;
+    }
+
+    .testi-name {
+      font-family: var(--font-heading);
+      font-size: var(--text-lg);
+      color: var(--p2p-red);
+      margin-bottom: 0;
+    }
+
+    .testi-location {
+      font-size: var(--text-xs);
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: var(--space-3);
+    }
+
+    .testi-quote {
+      font-size: var(--text-sm);
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.8);
+      margin: 0;
+    }
+
+    .testi-batch-label {
+      text-align: center;
+      margin-bottom: var(--space-6);
+      margin-top: var(--space-6);
+    }
+
+    .testi-batch-label:first-child {
+      margin-top: 0;
+    }
+
+    .testi-batch-label span {
+      font-size: var(--text-xs);
+      color: var(--p2p-gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: rgba(245, 166, 35, 0.1);
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-full);
+    }
+
+    @media(max-width:900px) {
+      .testi-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width:600px) {
+      .testi-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── Instructor ── */
+    .instructor-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-12);
+      align-items: center;
+    }
+
+    .instructor-img {
+      border: 3px solid var(--p2p-gold);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: #1a1a1a;
+    }
+
+    .instructor-img img {
+      width: 100%;
+      display: block;
+      border-radius: calc(var(--radius-lg) - 3px);
+    }
+
+    .instructor-name {
+      font-size: clamp(var(--text-2xl), 3vw, var(--text-4xl));
+      color: var(--p2p-gold);
+      margin-bottom: var(--space-1);
+    }
+
+    .instructor-title {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: var(--text-sm);
+      margin-bottom: var(--space-6);
+    }
+
+    .cred-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      margin-top: var(--space-4);
+    }
+
+    .cred-item {
+      display: flex;
+      gap: var(--space-3);
+      align-items: flex-start;
+      background: var(--p2p-red);
+      border-radius: var(--radius-md);
+      padding: var(--space-3) var(--space-4);
+    }
+
+    .cred-num {
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      color: var(--p2p-gold);
+      font-weight: 700;
+      flex-shrink: 0;
+      line-height: 1.2;
+    }
+
+    .cred-item p {
+      font-size: var(--text-sm);
+      margin: 0;
+      color: #fff;
+    }
+
+    @media(max-width:768px) {
+      .instructor-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── FAQ (DV2 style) ── */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    .faq-item {
+      background: var(--p2p-card);
+      border: 1px solid var(--p2p-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .faq-q {
+      width: 100%;
+      text-align: left;
+      padding: var(--space-4) var(--space-6);
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: var(--text-lg);
+      font-weight: 600;
+      font-family: var(--font-heading);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background var(--transition);
+    }
+
+    .faq-q:hover {
+      background: rgba(204, 0, 0, 0.08);
+    }
+
+    .faq-q::after {
+      content: '+';
+      font-size: 1.5rem;
+      color: var(--p2p-gold);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.open .faq-q::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-item.open .faq-q {
+      color: var(--p2p-gold);
+    }
+
+    .faq-a {
+      padding: 0 var(--space-6);
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item.open .faq-a {
+      padding-bottom: var(--space-5);
+      max-height: 500px;
+    }
+
+    .faq-a p {
+      font-size: var(--text-sm);
+      margin: 0;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* ── CTA final ── */
+    .cta-section {
+      position: relative;
+      text-align: center;
+      padding-block: var(--space-24);
+      padding-inline: var(--space-6);
+      overflow: hidden;
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url('assets/dv1/instructor_1.png') center/cover no-repeat;
+      margin-bottom: 68px;
+      /* sticky bar height */
+    }
+
+    .cta-quote {
+      font-size: clamp(var(--text-lg), 2.5vw, var(--text-2xl));
+      font-weight: 700;
+      max-width: 760px;
+      margin: 0 auto var(--space-8);
+      line-height: 1.6;
+      color: #fff;
+    }
+
+    .btn-cta-final {
+      display: block;
+      width: fit-content;
+      max-width: calc(100% - 2rem);
+      margin-left: auto;
+      margin-right: auto;
+      white-space: normal;
+      text-align: center;
+      line-height: 1.4;
+      background: var(--p2p-red);
+      color: #fff;
+      font-size: var(--text-xl);
+      padding: var(--space-5) var(--space-8);
+      border-radius: var(--radius-md);
+      box-sizing: border-box;
+    }
+
+    .btn-cta-final:hover {
+      background: #aa0000;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(204, 0, 0, 0.5);
+    }
+
+    .slots-note {
+      margin-top: var(--space-4);
+      font-size: var(--text-sm);
+      color: rgba(255, 255, 255, 0.5);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sticky CTA bar -->
+  <div class="sticky-cta" role="banner" aria-label="Đăng ký nhanh">
+    <div class="sticky-cta-info">
+      <span class="sticky-cta-title">🔥 Passion to Profit – Workshop F&B Online</span>
+      <span class="sticky-cta-meta">📅 14–15/03/2026 &nbsp;·&nbsp; 🕘 9:00–11:00 AM &nbsp;·&nbsp; 💰 499.000 VNĐ
+        &nbsp;·&nbsp; Chỉ 30 chỗ</span>
+    </div>
+    <a href="lien-he.html" class="btn btn-accent" style="color:#1a1a1a; font-weight:700;">Đăng Ký Ngay</a>
+  </div>
+
+  <!-- HEADER -->
+  <site-header></site-header>
+
+  <main>
+
+    <!-- S1: HERO -->
+    <section class="hero-p2p" aria-label="Giới thiệu khoá học">
+      <div class="hero-p2p-img">
+        <img src="assets/dv1/hero-coach.png" alt="Coach Vũ Kiều Loan – F&B Coach" loading="eager" />
+        <div class="coach-label">Vũ Kiều Loan – F&amp;B Coach</div>
+      </div>
+      <div style="padding-inline: var(--space-4);">
+        <span class="badge" style="margin-bottom:var(--space-4);display:inline-block;">Workshop F&amp;B Online · 2
+          ngày</span>
+        <h1 class="hero-p2p-title">PASSION<br /><span>TO</span><br />PROFIT</h1>
+        <p class="hero-tagline">"Bạn có phù hợp để kinh doanh nhà hàng không?"</p>
+        <p style="font-size:var(--text-base);max-width:480px;">Chỉ trong 2 ngày, Passion to Profit giúp bạn soi chiếu
+          bản thân, hiểu rõ ngành F&amp;B và có câu trả lời chắc chắn trước khi đầu tư thời gian, tiền bạc và công sức.
+        </p>
+        <div class="meta-row">
+          <div class="meta-item">
+            9:00–11:00 AM
+          </div>
+          <div class="meta-item">
+            14–15/03/2026
+          </div>
+        </div>
+        <div class="price-badge">499.000 VNĐ</div>
+
+        <!-- Countdown Timer -->
+        <div id="countdown-timer" style="margin-bottom:var(--space-6); display:flex; gap:10px; text-align:center;">
+          <div style="background:rgba(255,255,255,0.1); padding:10px 15px; border-radius:8px;">
+            <div id="cd-days"
+              style="font-family:var(--font-heading); font-size:2rem; color:var(--p2p-gold); line-height:1;">00</div>
+            <div style="font-size:0.75rem; text-transform:uppercase; color:rgba(255,255,255,0.7);">Ngày</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.1); padding:10px 15px; border-radius:8px;">
+            <div id="cd-hours"
+              style="font-family:var(--font-heading); font-size:2rem; color:var(--p2p-gold); line-height:1;">00</div>
+            <div style="font-size:0.75rem; text-transform:uppercase; color:rgba(255,255,255,0.7);">Giờ</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.1); padding:10px 15px; border-radius:8px;">
+            <div id="cd-mins"
+              style="font-family:var(--font-heading); font-size:2rem; color:var(--p2p-gold); line-height:1;">00</div>
+            <div style="font-size:0.75rem; text-transform:uppercase; color:rgba(255,255,255,0.7);">Phút</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.1); padding:10px 15px; border-radius:8px;">
+            <div id="cd-secs"
+              style="font-family:var(--font-heading); font-size:2rem; color:var(--p2p-red); line-height:1;">00</div>
+            <div style="font-size:0.75rem; text-transform:uppercase; color:rgba(255,255,255,0.7);">Giây</div>
+          </div>
+        </div>
+
+        <div>
+          <a href="lien-he.html" class="btn btn-p2p-cta">Đăng Ký Ngay – Chỉ 30 chỗ</a>
+        </div>
+        <p class="scholarship-note">⭐ Đặc biệt: Cơ hội nhận 1 suất học bổng 100% khoá <strong>BUSINESS TO
+            FREEDOM</strong> trị giá 15 triệu</p>
+      </div>
+    </section>
+
+    <!-- S2: CREDIBILITY -->
+    <section class="p2p-section alt" aria-label="Giới thiệu giảng viên">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Về chương trình</span>
+          <h2 style="margin-top:1rem;">Từ Đam mê đến Lợi nhuận bền vững</h2>
+          <div class="divider" style="margin-inline:auto;"></div>
+        </div>
+        <div class="cred-img-wrap">
+          <img src="assets/dv1/instructor_1.png"
+            alt="Vũ Kiều Loan đang giảng dạy trong không gian nhà hàng phong cách Mỹ" loading="lazy" />
+        </div>
+        <div class="stats-row">
+          <div class="stat-card" data-reveal>
+            <div class="stat-num">15+</div>
+            <div class="stat-label">Năm kinh nghiệm Nhà hàng, Khách sạn cao cấp ở Mỹ và Việt Nam</div>
+          </div>
+          <div class="stat-card" data-reveal>
+            <div class="stat-num">9+</div>
+            <div class="stat-label">Năm khởi nghiệp kinh doanh thực chiến ở thị trường Hà Nội</div>
+          </div>
+          <div class="stat-card" data-reveal>
+            <div class="stat-num">1000+</div>
+            <div class="stat-label">Cuốn sách được bán ra, truyền cảm hứng cho người trẻ khởi nghiệp</div>
+          </div>
+          <div class="stat-card" data-reveal>
+            <div class="stat-num">30+</div>
+            <div class="stat-label">Chủ quán đồng hành, đi từ con số 0 đến lợi nhuận bền vững</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- S3: TARGET AUDIENCE -->
+    <section class="p2p-section" aria-label="Đối tượng tham gia">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Dành cho bạn</span>
+          <h2 style="margin-top:1rem;">Chương trình này dành cho bạn nếu</h2>
+          <div class="divider" style="margin-inline:auto;"></div>
+        </div>
+        <div class="target-grid">
+          <div class="target-card" data-reveal>
+            <div class="target-num">01</div>
+            <p>Bạn có <strong>đam mê ẩm thực</strong> nhưng chưa biết mình có hợp với kinh doanh không</p>
+          </div>
+          <div class="target-card" data-reveal>
+            <div class="target-num">02</div>
+            <p>Bạn có <strong>ước mơ mở quán</strong> riêng nhưng sợ rủi ro, mất hết vốn đầu tư</p>
+          </div>
+          <div class="target-card" data-reveal>
+            <div class="target-num">03</div>
+            <p>Bạn có năng khiếu nấu ăn nhưng <strong>chưa từng quản lý</strong> chi phí, sổ sách, nhân sự</p>
+          </div>
+          <div class="target-card" data-reveal>
+            <div class="target-num">04</div>
+            <p>Bạn có nhiều <strong>ý tưởng và mô hình</strong> trong đầu nhưng không biết cái nào thực tế</p>
+          </div>
+          <div class="target-card" data-reveal>
+            <div class="target-num">05</div>
+            <p>Bạn muốn thử sức trong ngành F&amp;B nhưng chưa hiểu rõ những <strong>khó khăn và rủi ro</strong> phía
+              sau</p>
+          </div>
+          <div class="target-card" data-reveal>
+            <div class="target-num">06</div>
+            <p>Bạn thích <strong>làm chủ cuộc sống</strong> nhưng chưa hình dung rõ trách nhiệm của người chủ quán</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- S4: BENEFITS -->
+    <section class="p2p-section alt" aria-label="Lợi ích khoá học">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Lợi ích</span>
+          <h2 style="margin-top:1rem;">Từ Ước mơ mở quán đến Bản đồ hành động rõ ràng</h2>
+          <div class="divider" style="margin-inline:auto;"></div>
+        </div>
+        <div class="benefit-grid">
+          <div class="benefit-card" data-reveal>
+            <div class="benefit-icon" aria-hidden="true">📊</div>
+            <h3>Bức tranh thực tế của ngành F&amp;B</h3>
+            <p>Hiểu rõ cơ hội, thách thức và những rủi ro thường gặp, thay vì chỉ nhìn thấy "hào quang" bên ngoài</p>
+          </div>
+          <div class="benefit-card" data-reveal>
+            <div class="benefit-icon" aria-hidden="true">🎯</div>
+            <h3>Xác định rõ vai trò người chủ quán</h3>
+            <p>Biết sự khác biệt giữa "người nấu ăn giỏi" và "người làm chủ", định vị xem mình có sẵn sàng không</p>
+          </div>
+          <div class="benefit-card" data-reveal>
+            <div class="benefit-icon" aria-hidden="true">🔍</div>
+            <h3>Tự đánh giá mức độ phù hợp</h3>
+            <p>Có bộ câu hỏi và tiêu chí cụ thể để soi chiếu tính cách, kỹ năng, nguồn lực của bản thân</p>
+          </div>
+          <div class="benefit-card" data-reveal>
+            <div class="benefit-icon" aria-hidden="true">💰</div>
+            <h3>Hiểu rõ con số cơ bản trong F&amp;B</h3>
+            <p>Nắm được những chỉ số tài chính tối thiểu cần biết để không "đi trong bóng tối" khi kinh doanh</p>
+          </div>
+          <div class="benefit-card" data-reveal>
+            <div class="benefit-icon" aria-hidden="true">💡</div>
+            <h3>Làm rõ ước mơ và ý tưởng</h3>
+            <p>Biết cách phân loại, chọn lọc và kiểm chứng các ý tưởng, để không còn mơ hồ giữa nhiều mô hình</p>
+          </div>
+          <div class="benefit-card" data-reveal>
+            <div class="benefit-icon" aria-hidden="true">🗺️</div>
+            <h3>Bản đồ định hướng</h3>
+            <p>Có lộ trình cụ thể và thiết thực, để chuyển từ mơ ước sang hành động một cách an toàn, chắc chắn</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- S5: MODULES -->
+    <section class="p2p-section" aria-label="Nội dung khoá học">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Nội dung</span>
+          <h2 style="margin-top:1rem;">Hành trình 2 ngày học tập</h2>
+          <div class="divider" style="margin-inline:auto;"></div>
+        </div>
+        <div class="modules-list">
+          <div class="module-card" data-reveal>
+            <div class="module-label">MODULE 1</div>
+            <div>
+              <h3>WHY? – Tại sao kinh doanh nhà hàng?</h3>
+              <p>Kinh doanh nhà hàng không chỉ mang lại biên lợi nhuận hấp dẫn, mà còn cho bạn sự tự do trong việc làm
+                chủ thời gian và cuộc sống. Quan trọng hơn, nó đem lại ý nghĩa cuộc sống khi mỗi món ăn và trải nghiệm
+                khách hàng trở thành giá trị bạn gửi gắm cho cộng đồng.</p>
+            </div>
+          </div>
+          <div class="module-card" data-reveal>
+            <div class="module-label">MODULE 2</div>
+            <div>
+              <h3>WHAT? – Bạn cần biết gì để thành công?</h3>
+              <p>Để thành công trong ngành F&amp;B, bạn cần nắm rõ lộ trình 5P: <strong
+                  style="color:var(--p2p-gold)">Passion, Plan, Product, People &amp; Process, và Profit</strong>. Đây là
+                bản đồ giúp bạn đi từ đam mê đến lợi nhuận, từ ý tưởng ban đầu đến một mô hình bền vững.</p>
+            </div>
+          </div>
+          <div class="module-card" data-reveal>
+            <div class="module-label">MODULE 3</div>
+            <div>
+              <h3>WHAT'S NEXT? – Bước tiếp theo dành cho bạn?</h3>
+              <p>Bạn không cô đơn trên hành trình này. Hãy học từ người đi trước, duy trì kết nối trong cộng đồng những
+                người khởi nghiệp, và chọn cho mình một người F&amp;B Coach chuyên nghiệp để cá nhân hoá lộ trình và cam
+                kết hành động.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- S6–9: TESTIMONIALS -->
+    <section class="p2p-section alt" aria-label="Học viên nói gì">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Học viên nói gì</span>
+          <h2 style="margin-top:1rem;">Học viên nói gì về PASSION TO PROFIT?</h2>
+          <div class="divider" style="margin-inline:auto;"></div>
+        </div>
+
+        <div class="testi-batch-label"><span>Batch 1</span></div>
+        <div class="testi-grid">
+          <div class="testi-card" data-reveal>
+            <div class="testi-img-wrap"><img src="assets/dv1/t1-lyly.png" class="testi-img"
+                alt="Lyly – học viên Passion to Profit" loading="lazy" /></div>
+            <div class="testi-body">
+              <p class="testi-name">Lyly</p>
+              <p class="testi-location">Hà Nội</p>
+              <p class="testi-quote">"Workshop của chị Loan không chỉ truyền cảm hứng mà còn cho em công cụ thực tế để
+                hành động. Giờ thì em biết mô hình nào phù hợp với vốn và năng lực của bản thân. Không còn mơ hồ như
+                trước nữa."</p>
+            </div>
+          </div>
+          <div class="testi-card" data-reveal>
+            <div class="testi-img-wrap"><img src="assets/dv1/t1-thuha.png" class="testi-img"
+                alt="Thu Hà – học viên Passion to Profit" loading="lazy" /></div>
+            <div class="testi-body">
+              <p class="testi-name">Thu Hà</p>
+              <p class="testi-location">Hà Nội</p>
+              <p class="testi-quote">"Trước giờ em cứ nghĩ phải hoàn hảo rồi mới bắt đầu. Nhưng workshop này cho em thấy
+                bắt đầu từ niềm tin và kế hoạch rõ ràng là đủ. Em muốn mở một quán cafe và bánh ngọt nhỏ nhỏ xinh xinh."
+              </p>
+            </div>
+          </div>
+          <div class="testi-card" data-reveal>
+            <div class="testi-img-wrap"><img src="assets/dv1/t1-haohao.png" class="testi-img"
+                alt="Hảo Hảo – học viên Passion to Profit" loading="lazy" /></div>
+            <div class="testi-body">
+              <p class="testi-name">Hảo Hảo</p>
+              <p class="testi-location">Hà Nội</p>
+              <p class="testi-quote">"Em cảm ơn chị Loan rất nhiều khi buổi workshop hôm nay thực sự truyền động lực cho
+                em gia nhập vào ngành F&B. Rất mong được tham dự thêm các buổi workshop của chị để làm rõ các chữ P."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-batch-label"><span>Batch 2</span></div>
+        <div class="testi-grid">
+          <div class="testi-card" data-reveal>
+            <div class="testi-img-wrap"><img src="assets/dv1/t2-thuynga.png" class="testi-img"
+                alt="Thuý Nga – học viên Passion to Profit" loading="lazy" /></div>
+            <div class="testi-body">
+              <p class="testi-name">Thuý Nga</p>
+              <p class="testi-location">Hà Nội</p>
+              <p class="testi-quote">"Tham gia workshop của Loan mà thấy giá trị quá. Chị ao ước mở một quán cafe nhỏ
+                nhưng luôn sợ hãi sẽ thất bại. Nhờ Loan chia sẻ bí kíp, kiến thức, trải nghiệm mà chị có thêm dũng khí
+                để quyết tâm xây dựng lại kế hoạch một cách rõ ràng."</p>
+            </div>
+          </div>
+          <div class="testi-card" data-reveal>
+            <div class="testi-img-wrap"><img src="assets/dv1/t2-chuphinnga.png" class="testi-img"
+                alt="Chu Phi Nga – học viên Passion to Profit" loading="lazy" /></div>
+            <div class="testi-body">
+              <p class="testi-name">Chu Phi Nga</p>
+              <p class="testi-location">Hà Nội</p>
+              <p class="testi-quote">"Sau khoá học, mình nhận ra rằng: đừng chỉ bắt đầu với đam mê. Đam mê phải đi liền
+                với thực tế, kiểm soát những con số ngay từ khi bắt đầu."</p>
+            </div>
+          </div>
+          <div class="testi-card" data-reveal>
+            <div class="testi-img-wrap"><img src="assets/dv1/t2-hoanglam.png" class="testi-img"
+                alt="Hoàng Lâm – học viên Passion to Profit" loading="lazy" /></div>
+            <div class="testi-body">
+              <p class="testi-name">Hoàng Lâm</p>
+              <p class="testi-location">TP HCM</p>
+              <p class="testi-quote">"Cảm ơn những kiến thức của chị Loan, giúp em hình dung được các thách thức của một
+                người mới bắt đầu nếu mong muốn bước vào lĩnh vực của ngành F&B và tránh những quyết định dại dột dẫn
+                đến mất tiền."</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-batch-label"><span>Batch 3</span></div>
+        <div class="testi-grid">
+          <div class="testi-card" data-reveal>
+            <div class="testi-img-wrap"><img src="assets/dv1/t3-liahvu.png" class="testi-img"
+                alt="Liah Vu – học viên Passion to Profit" loading="lazy" /></div>
+            <div class="testi-body">
+              <p class="testi-name">Liah Vu</p>
+              <p class="testi-location">Hà Nội</p>
+              <p class="testi-quote">"Tôi thấy tự tin hơn với con đường sắp tới, hiểu rõ hơn các chỉ số quan trọng về
+                tài chính trong việc vận hành một mô hình kinh doanh và sẽ tiếp tục học tập, chia sẻ để biến ước mơ
+                thành hiện thực."</p>
+            </div>
+          </div>
+          <div class="testi-card" data-reveal>
+            <div class="testi-img-wrap"><img src="assets/dv1/t3-lykhanhle.png" class="testi-img"
+                alt="Ly Khánh Lê – học viên Passion to Profit" loading="lazy" /></div>
+            <div class="testi-body">
+              <p class="testi-name">Ly Khánh Lê</p>
+              <p class="testi-location">Hà Nội</p>
+              <p class="testi-quote">"Em từng đóng cửa một quán cà phê vì không biết kiểm soát chi phí. Hôm nay ngồi
+                trong lớp học, em như được chữa lành. Không ai phán xét, không ai dạy đời, chỉ có sự thẳng thắn, rõ
+                ràng, và những hướng dẫn cụ thể."</p>
+            </div>
+          </div>
+          <div class="testi-card" data-reveal>
+            <div class="testi-img-wrap"><img src="assets/dv1/t3-diemtruong.png" class="testi-img"
+                alt="Diễm Trương – học viên Passion to Profit" loading="lazy" /></div>
+            <div class="testi-body">
+              <p class="testi-name">Diễm Trương</p>
+              <p class="testi-location">TP HCM</p>
+              <p class="testi-quote">"Toàn những kiến thức chuyên sâu, thực chiến một người đã trải qua bao nhiêu bài
+                học. Thật quá giá trị."</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-batch-label"><span>Batch 4</span></div>
+        <div class="testi-grid">
+          <div class="testi-card" data-reveal>
+            <div class="testi-img-wrap"><img src="assets/dv1/t4-kimngan.png" class="testi-img"
+                alt="Trần Vũ Kim Ngân – học viên Passion to Profit" loading="lazy" /></div>
+            <div class="testi-body">
+              <p class="testi-name">Trần Vũ Kim Ngân</p>
+              <p class="testi-location">Biên Hoà</p>
+              <p class="testi-quote">"Sau chỉ 2 buổi workshop, em đã phác thảo được một bản kế hoạch kinh doanh rõ ràng.
+                Bắt đầu từ chân dung khách hàng, tới việc giải quyết các vấn đề, nỗi đau của họ, biết cách làm mình khác
+                biệt hơn với các đối thủ trên thị trường."</p>
+            </div>
+          </div>
+          <div class="testi-card" data-reveal>
+            <div class="testi-img-wrap"><img src="assets/dv1/t4-duonghang.png" class="testi-img"
+                alt="Dương Hằng – học viên Passion to Profit" loading="lazy" /></div>
+            <div class="testi-body">
+              <p class="testi-name">Dương Hằng</p>
+              <p class="testi-location">Hà Nội</p>
+              <p class="testi-quote">"Em tham gia chương trình và học được cách xây dựng kế hoạch và những thứ quan
+                trọng cốt lõi trong việc xây dựng nhà hàng/quán cafe, dự toán doanh thu và chi phí để vận hành quán. Mọi
+                thứ sắp không chỉ còn là giấc mơ."</p>
+            </div>
+          </div>
+          <div class="testi-card" data-reveal>
+            <div class="testi-img-wrap"><img src="assets/dv1/t4-quocminh.png" class="testi-img"
+                alt="Nguyễn Quốc Minh – học viên Passion to Profit" loading="lazy" /></div>
+            <div class="testi-body">
+              <p class="testi-name">Nguyễn Quốc Minh</p>
+              <p class="testi-location">Hà Nội</p>
+              <p class="testi-quote">"Qua 2 buổi workshop em hiểu được việc học hỏi từ những người đi trước là rất quan
+                trọng. Đặc biệt với những ai mới bắt đầu khởi nghiệp sẽ tiết kiệm được rất nhiều thời gian, công sức và
+                tiền bạc."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- S10: INSTRUCTOR -->
+    <section class="p2p-section" aria-label="Giảng viên">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Giảng viên</span>
+          <h2 style="margin-top:1rem;">Ai là người đồng hành cùng bạn?</h2>
+          <div class="divider" style="margin-inline:auto;"></div>
+        </div>
+        <div class="instructor-layout">
+          <div class="instructor-img">
+            <img src="assets/dv1/instructor_2.jpg" alt="Vũ Kiều Loan – F&B Startup Coach, ICF PCC" loading="lazy" />
+          </div>
+          <div>
+            <h2 class="instructor-name">Vũ Kiều Loan</h2>
+            <p class="instructor-title">F&amp;B Startup Coach · ICF PCC</p>
+            <div class="divider"></div>
+            <div class="cred-list">
+              <div class="cred-item">
+                <span class="cred-num">01</span>
+                <p>15 năm trong ngành F&amp;B &amp; Hospitality tại Mỹ và Việt Nam</p>
+              </div>
+              <div class="cred-item">
+                <span class="cred-num">02</span>
+                <p>8 năm khởi nghiệp: Chủ sở hữu &amp; CEO của S&amp;L's Diner – nhà hàng Mỹ tiên phong phong cách American Diner tại Hà Nội</p>
+              </div>
+              <div class="cred-item">
+                <span class="cred-num">03</span>
+                <p>ICF PCC Coach: Top 80 người Việt đạt chứng nhận quốc tế Coach chuyên nghiệp (2025)</p>
+              </div>
+              <div class="cred-item">
+                <span class="cred-num">04</span>
+                <p>Tác giả sách <em>Ánh sáng của ước mơ</em>, đã bán được hơn 1000 bản, chạm đến hơn 1000 người trẻ khởi
+                  nghiệp</p>
+              </div>
+              <div class="cred-item">
+                <span class="cred-num">05</span>
+                <p>Đồng hành cùng 50+ chủ quán từ con số 0 đến lợi nhuận bền vững</p>
+              </div>
+            </div>
+            <div style="margin-top: var(--space-6); display: flex; gap: var(--space-3); flex-wrap: wrap;">
+              <a href="https://www.facebook.com/loanvuk" target="_blank" rel="noopener" style="font-size:var(--text-sm); padding: 8px 16px; background: rgba(255,255,255,0.08); color:#fff; border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-md); text-decoration:none;">📘 Facebook</a>
+              <a href="https://www.instagram.com/loanvuk" target="_blank" rel="noopener" style="font-size:var(--text-sm); padding: 8px 16px; background: rgba(255,255,255,0.08); color:#fff; border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-md); text-decoration:none;">📸 Instagram</a>
+              <a href="https://www.vukieuloan.com" target="_blank" rel="noopener" style="font-size:var(--text-sm); padding: 8px 16px; background: rgba(255,255,255,0.08); color:#fff; border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-md); text-decoration:none;">🌐 vukieuloan.com</a>
+              <a href="mailto:loanvuk@gmail.com" style="font-size:var(--text-sm); padding: 8px 16px; background: rgba(255,255,255,0.08); color:#fff; border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius-md); text-decoration:none;">✉️ loanvuk@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- S11–13: FAQ -->
+    <section class="p2p-section alt" aria-label="Câu hỏi thường gặp">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">FAQ</span>
+          <h2 style="margin-top:1rem;">Câu hỏi thường gặp</h2>
+          <div class="divider" style="margin-inline:auto;"></div>
+        </div>
+        <div class="faq-list" style="max-width:760px;margin-inline:auto;">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>1. Khóa học này phù hợp với ai?</span>
+            </button>
+            <div class="faq-a">
+              <p>Dành cho những ai chưa từng kinh doanh F&B, đang ấp ủ ý tưởng mở quán và muốn biết mình có phù hợp hay
+                không.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>2. Tôi chưa biết nấu ăn, có tham gia được không?</span>
+            </button>
+            <div class="faq-a">
+              <p>Có. Passion to Profit không dạy nấu ăn, mà giúp bạn hiểu vai trò người chủ quán và bản đồ kinh doanh.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>3. Học online có hiệu quả không?</span>
+            </button>
+            <div class="faq-a">
+              <p>Có. Lớp học trực tuyến qua Zoom, có slide, case study, bài tập tương tác và bản ghi hình sau buổi học.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>4. Chương trình này có gì khác so với các khóa học mở quán khác?</span>
+            </button>
+            <div class="faq-a">
+              <p>Khác biệt là Passion to Profit giúp bạn soi chiếu chính mình, xác định rõ có nên bắt đầu hay chưa, thay
+                vì chỉ học mẹo hay lý thuyết.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>5. Sau chương trình tôi sẽ làm gì tiếp theo?</span>
+            </button>
+            <div class="faq-a">
+              <p>Bạn sẽ có sự rõ ràng để quyết định tiếp theo; đồng thời có cơ hội nhận suất học bổng Business to
+                Freedom trị giá 15 triệu.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>6. Tôi sợ học xong rồi cũng để đó, không áp dụng được?</span>
+            </button>
+            <div class="faq-a">
+              <p>Bạn sẽ có checklist và bản đồ định hướng cá nhân để áp dụng ngay sau khoá học.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>7. Tôi sẽ thật sự nhận được gì sau khoá học?</span>
+            </button>
+            <div class="faq-a">
+              <p>Bức tranh F&B thực tế, sự khác biệt chủ–đầu bếp, bộ tiêu chí tự đánh giá, con số cơ bản cần nắm, và bản
+                đồ lộ trình 5P.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>8. Khóa học có cam kết giúp tôi mở nhà hàng thành công không?</span>
+            </button>
+            <div class="faq-a">
+              <p>Chúng tôi không hứa hẹn thành công ngay, nhưng bạn sẽ tiết kiệm thời gian, tiền bạc và tránh được những
+                sai lầm đắt giá.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>9. Thời gian và chi phí như thế nào?</span>
+            </button>
+            <div class="faq-a">
+              <p>2 ngày, mỗi ngày 2 giờ, học online qua Zoom. Chi phí: <strong style="color:var(--p2p-gold)">499.000 VNĐ
+                  / học viên</strong>. Cơ hội nhận học bổng Business to Freedom trị giá 15 triệu.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- S14: CTA FINAL -->
+    <section class="cta-section" aria-label="Đăng ký ngay">
+      <div class="container">
+        <p class="cta-quote">"Bạn có thể tiếp tục mơ mộng và trả giá bằng thử–sai, hoặc chỉ cần 2 ngày để có câu trả lời
+          rõ ràng: <strong>Mình có phù hợp để kinh doanh nhà hàng hay không?</strong>"</p>
+        <a href="lien-he.html" class="btn btn-cta-final">Đăng ký ngay hôm nay – Chỉ 30 chỗ cho Passion to Profit</a>
+        <p class="slots-note">📅 14–15/03/2026 &nbsp;|&nbsp; 🕐 9:00–11:00 AM &nbsp;|&nbsp; 💲 499.000 VNĐ</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <site-footer></site-footer>
+
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // FAQ accordion – auto-close others on open
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        // Close others
+        document.querySelectorAll('.faq-item').forEach(other => {
+          if (other !== item) {
+            other.classList.remove('open');
+            other.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+          }
+        });
+        // Toggle current
+        item.classList.toggle('open');
+        btn.setAttribute('aria-expanded', item.classList.contains('open'));
+      });
+    });
+
+    // Countdown Timer logic
+    const targetDate = new Date("March 14, 2026 09:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        document.getElementById('countdown-timer').innerHTML = '<div style="color:var(--p2p-red);font-weight:bold;font-size:1.2rem;">Khoá học đã bắt đầu!</div>';
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById('cd-days').innerText = days.toString().padStart(2, '0');
+      document.getElementById('cd-hours').innerText = hours.toString().padStart(2, '0');
+      document.getElementById('cd-mins').innerText = minutes.toString().padStart(2, '0');
+      document.getElementById('cd-secs').innerText = seconds.toString().padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+
+</html>
