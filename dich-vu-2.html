@@ -1,43 +1,73 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business to Freedom – Coaching F&B | Coach Loan Vũ</title>
-    <meta name="description" content="Khoá học F&B chuyên sâu 10 tuần online giúp bạn xây dựng hệ thống vận hành, thoát khỏi bán sức lao động và sống tự do.">
+    <meta name="description"
+        content="Khoá học F&B chuyên sâu 10 tuần online giúp bạn xây dựng hệ thống vận hành, thoát khỏi bán sức lao động và sống tự do.">
     <link rel="stylesheet" href="css/style.css">
     <style>
         /* ── Dark premium theme cho Dịch vụ 2 ── */
-        html, body { overflow-x: hidden; max-width: 100%; }
+        html,
+        body {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+
         :root {
-            --b2f-navy:   #0f1f35;
-            --b2f-gold:   #F5C842;
+            --b2f-navy: #0f1f35;
+            --b2f-gold: #F5C842;
             --b2f-orange: #E87722;
-            --b2f-card:   rgba(255,255,255,0.05);
-            --b2f-border: rgba(255,255,255,0.1);
+            --b2f-card: rgba(255, 255, 255, 0.05);
+            --b2f-border: rgba(255, 255, 255, 0.1);
         }
 
-        body { 
-            background: var(--b2f-navy); 
-            color: #CBD5E1; 
+        body {
+            background: var(--b2f-navy);
+            color: #CBD5E1;
         }
 
-        h1, h2, h3, h4 { color: var(--b2f-gold); }
-        p { color: #CBD5E1; }
-        
-        .site-header { 
-            background: #0a1828; 
-            border-bottom: 1px solid var(--b2f-border); 
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: var(--b2f-gold);
         }
-        .nav-logo, .nav-logo span { color: var(--b2f-gold); }
-        .nav-links a { color: #CBD5E1; }
-        .nav-links a.active, .nav-links a:hover { color: var(--b2f-gold); }
-        .nav-links a::after { background: var(--b2f-gold); }
+
+        p {
+            color: #CBD5E1;
+        }
+
+        .site-header {
+            background: #0a1828;
+            border-bottom: 1px solid var(--b2f-border);
+        }
+
+        .nav-logo,
+        .nav-logo span {
+            color: var(--b2f-gold);
+        }
+
+        .nav-links a {
+            color: #CBD5E1;
+        }
+
+        .nav-links a.active,
+        .nav-links a:hover {
+            color: var(--b2f-gold);
+        }
+
+        .nav-links a::after {
+            background: var(--b2f-gold);
+        }
 
         .btn-primary {
             background: var(--b2f-orange);
             color: #fff;
         }
+
         .btn-primary:hover {
             background: #cd6518;
             color: #fff;
@@ -50,31 +80,68 @@
         }
 
         /* Helpers */
-        .b2f-section { 
-            padding-block: var(--space-20); 
-            overflow: hidden; 
+        .b2f-section {
+            padding-block: var(--space-20);
+            overflow: hidden;
         }
+
         /* Mobile section padding */
         @media(max-width: 600px) {
-            .b2f-section { padding-inline: var(--space-4); }
-            .container { padding-inline: var(--space-4); }
-            .hero-section-bg { padding-inline: var(--space-4); }
-            .hero-content h1 { font-size: clamp(2rem, 8vw, 2.8rem); }
-            .faq-q { padding: var(--space-3) var(--space-4); font-size: var(--text-base); }
-            .faq-a { padding: 0 var(--space-4); }
-            .b2f-card { padding: var(--space-4); }
-            .btn-primary, .btn {
-                display: block; white-space: normal; text-align: center;
-                max-width: calc(100% - 2rem); box-sizing: border-box;
-                margin-left: auto; margin-right: auto; line-height: 1.4;
+            .b2f-section {
+                padding-inline: var(--space-4);
+            }
+
+            .container {
+                padding-inline: var(--space-4);
+            }
+
+            .hero-section-bg {
+                padding-inline: var(--space-4);
+            }
+
+            .hero-content h1 {
+                font-size: clamp(2rem, 8vw, 2.8rem);
+            }
+
+            .faq-q {
+                padding: var(--space-3) var(--space-4);
+                font-size: var(--text-base);
+            }
+
+            .faq-a {
+                padding: 0 var(--space-4);
+            }
+
+            .b2f-card {
+                padding: var(--space-4);
+            }
+
+            .btn-primary,
+            .btn {
+                display: block;
+                white-space: normal;
+                text-align: center;
+                max-width: calc(100% - 2rem);
+                box-sizing: border-box;
+                margin-left: auto;
+                margin-right: auto;
+                line-height: 1.4;
             }
         }
-        .b2f-section.alt { 
-            background: #0a1828; 
+
+        .b2f-section.alt {
+            background: #0a1828;
         }
-        .section-header { position: relative; z-index: 1; }
-        .section-header p { color: #94A3B8; }
-        
+
+        .section-header {
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header p {
+            color: #94A3B8;
+        }
+
         .b2f-divider {
             width: 60px;
             height: 3px;
@@ -82,7 +149,10 @@
             margin-block: var(--space-4);
             border-radius: var(--radius-full);
         }
-        .section-header .b2f-divider { margin-inline: auto; }
+
+        .section-header .b2f-divider {
+            margin-inline: auto;
+        }
 
         /* Card styles */
         .b2f-card {
@@ -92,7 +162,12 @@
             padding: var(--space-8);
             transition: transform var(--transition);
         }
-        .b2f-card:hover { border-color: rgba(245, 200, 66, 0.3); transform: translateY(-4px); }
+
+        .b2f-card:hover {
+            border-color: rgba(245, 200, 66, 0.3);
+            transform: translateY(-4px);
+        }
+
         .b2f-card-icon {
             font-size: 2rem;
             color: var(--b2f-gold);
@@ -106,6 +181,7 @@
             gap: var(--space-8);
             align-items: center;
         }
+
         .hero-section-bg {
             background:
                 radial-gradient(ellipse at 10% 80%, rgba(232, 119, 34, 0.30) 0%, transparent 50%),
@@ -116,53 +192,152 @@
             display: flex;
             align-items: center;
         }
-        .hero-content h1 { line-height: 1.1; margin-bottom: var(--space-4); }
-        .hero-tagline { font-size: var(--text-2xl); color: var(--b2f-orange); font-style: italic; margin-bottom: var(--space-4); }
-        .hero-info { 
-            display: flex; gap: var(--space-8); flex-wrap: wrap; margin-block: var(--space-6); 
-            background: rgba(0,0,0,0.2); padding: var(--space-4); border-radius: var(--radius-md); border-left: 4px solid var(--b2f-gold);
+
+        .hero-content h1 {
+            line-height: 1.1;
+            margin-bottom: var(--space-4);
         }
-        .hero-info-item span:first-child { display: block; font-size: var(--text-sm); color: #94A3B8; text-transform: uppercase; letter-spacing: 1px; }
-        .hero-info-item span:last-child { font-weight: 700; color: #fff; text-shadow: none; }
-        .hero-img-wrap { text-align: center; position: relative; }
+
+        .hero-tagline {
+            font-size: var(--text-2xl);
+            color: var(--b2f-orange);
+            font-style: italic;
+            margin-bottom: var(--space-4);
+        }
+
+        .hero-info {
+            display: flex;
+            gap: var(--space-8);
+            flex-wrap: wrap;
+            margin-block: var(--space-6);
+            background: rgba(0, 0, 0, 0.2);
+            padding: var(--space-4);
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--b2f-gold);
+        }
+
+        .hero-info-item span:first-child {
+            display: block;
+            font-size: var(--text-sm);
+            color: #94A3B8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-info-item span:last-child {
+            font-weight: 700;
+            color: #fff;
+            text-shadow: none;
+        }
+
+        .hero-img-wrap {
+            text-align: center;
+            position: relative;
+        }
+
         .hero-img-wrap::after {
             content: '';
             position: absolute;
-            bottom: 0; left: 0; right: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
             height: 35%;
             background: linear-gradient(to top, #0a1828 0%, transparent 100%);
             pointer-events: none;
         }
-        .hero-img { border-radius: var(--radius-lg); max-height: 600px; object-fit: contain; }
+
+        .hero-img {
+            border-radius: var(--radius-lg);
+            max-height: 600px;
+            object-fit: contain;
+        }
 
         /* Pain Points */
-        .pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-6); }
-        .pain-card h4 { color: #fff; margin-bottom: var(--space-2); }
-        
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-6);
+        }
+
+        .pain-card h4 {
+            color: #fff;
+            margin-bottom: var(--space-2);
+        }
+
         /* Stats / Target */
-        .target-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); }
+        .target-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-6);
+        }
 
         /* Curriculum / Lộ trình */
-        .timeline { display: flex; flex-direction: column; gap: var(--space-4); }
-        .timeline-item { 
-            display: flex; gap: var(--space-4); 
-            background: var(--b2f-card); padding: var(--space-4); border-radius: var(--radius-md); border-left: 3px solid var(--b2f-gold);
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
         }
-        .timeline-week { font-weight: 700; color: var(--b2f-gold); min-width: 80px; text-transform: uppercase; }
+
+        .timeline-item {
+            display: flex;
+            gap: var(--space-4);
+            background: var(--b2f-card);
+            padding: var(--space-4);
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--b2f-gold);
+        }
+
+        .timeline-week {
+            font-weight: 700;
+            color: var(--b2f-gold);
+            min-width: 80px;
+            text-transform: uppercase;
+        }
 
         /* Testimonials */
-        .testi-img-wrap { width: 100%; aspect-ratio: 4/5; overflow: hidden; border-radius: var(--radius-md); margin-bottom: var(--space-4); }
-        .testi-img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
-        .testi-quote { font-style: italic; color: #fff; }
+        .testi-img-wrap {
+            width: 100%;
+            aspect-ratio: 4/5;
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-4);
+        }
+
+        .testi-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .testi-quote {
+            font-style: italic;
+            color: #fff;
+        }
 
         /* FAQ */
-        @media(max-width:768px){
-            .pain-card { padding: var(--space-4); }
-            .timeline-item { padding: var(--space-4); gap: var(--space-4); }
-            .hero-content h1 { font-size: clamp(2rem, 8vw, 2.5rem); }
+        @media(max-width:768px) {
+            .pain-card {
+                padding: var(--space-4);
+            }
+
+            .timeline-item {
+                padding: var(--space-4);
+                gap: var(--space-4);
+            }
+
+            .hero-content h1 {
+                font-size: clamp(2rem, 8vw, 2.5rem);
+            }
         }
-        @media(max-width:640px){ .target-grid { grid-template-columns: 1fr; } }
-        
+
+        @media(max-width:640px) {
+            .target-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .faq-item {
             background: var(--b2f-card);
             border: 1px solid var(--b2f-border);
@@ -170,6 +345,7 @@
             margin-bottom: var(--space-4);
             overflow: hidden;
         }
+
         .faq-q {
             width: 100%;
             text-align: left;
@@ -185,15 +361,36 @@
             justify-content: space-between;
             align-items: center;
         }
-        .faq-q::after { content: '+'; font-size: 1.5rem; color: var(--b2f-gold); transition: transform var(--transition); }
-        .faq-item.open .faq-q::after { transform: rotate(45deg); }
-        .faq-a { padding: 0 var(--space-6); max-height: 0; overflow: hidden; transition: all 0.3s ease; }
-        .faq-item.open .faq-a { padding-bottom: var(--space-4); max-height: 500px; }
+
+        .faq-q::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--b2f-gold);
+            transition: transform var(--transition);
+        }
+
+        .faq-item.open .faq-q::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-a {
+            padding: 0 var(--space-6);
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.open .faq-a {
+            padding-bottom: var(--space-4);
+            max-height: 500px;
+        }
 
         /* Sticky CTA */
         .sticky-cta {
             position: fixed;
-            bottom: 0; left: 0; right: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
             background: var(--b2f-orange);
             color: #fff;
             padding: var(--space-2) var(--space-6);
@@ -202,27 +399,94 @@
             align-items: center;
             gap: var(--space-4);
             z-index: 100;
-            box-shadow: 0 -4px 12px rgba(0,0,0,0.3);
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
         }
-        .sticky-cta-info { display: flex; flex-direction: column; }
-        .sticky-cta-title { color: #fff; font-weight: 700; font-size: var(--text-base); }
-        .sticky-cta-meta { color: rgba(255,255,255,0.85); font-size: var(--text-sm); margin-top: 2px; }
-        .sticky-cta .btn { background: #fff; color: var(--b2f-orange); padding: var(--space-2) var(--space-6); font-size: var(--text-sm); white-space: nowrap; flex-shrink: 0; font-weight: 700; }
-        .sticky-cta .btn:hover { background: #f0f0f0; transform: translateY(-2px); }
+
+        .sticky-cta-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sticky-cta-title {
+            color: #fff;
+            font-weight: 700;
+            font-size: var(--text-base);
+        }
+
+        .sticky-cta-meta {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: var(--text-sm);
+            margin-top: 2px;
+        }
+
+        .sticky-cta .btn {
+            background: #fff;
+            color: var(--b2f-orange);
+            padding: var(--space-2) var(--space-6);
+            font-size: var(--text-sm);
+            white-space: nowrap;
+            flex-shrink: 0;
+            font-weight: 700;
+        }
+
+        .sticky-cta .btn:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+        }
 
         @media (max-width: 768px) {
-            .hero { grid-template-columns: 1fr; }
-            .target-grid { grid-template-columns: 1fr; }
-            .hero-info { flex-direction: column; gap: var(--space-4); }
-            body { padding-bottom: 70px; /* space for sticky cta */ }
-            .sticky-cta { padding: var(--space-2) var(--space-4); }
-            .sticky-cta-title { font-size: var(--text-sm); line-height: 1.4; }
-            .sticky-cta-meta { font-size: 0.75rem; }
-            .sticky-cta .btn { padding: 6px 16px; font-size: var(--text-xs); }
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .target-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-info {
+                flex-direction: column;
+                gap: var(--space-4);
+            }
+
+            body {
+                padding-bottom: 70px;
+                /* space for sticky cta */
+            }
+
+            .sticky-cta {
+                padding: var(--space-2) var(--space-4);
+            }
+
+            .sticky-cta-title {
+                font-size: var(--text-sm);
+                line-height: 1.4;
+            }
+
+            .sticky-cta-meta {
+                font-size: 0.75rem;
+            }
+
+            .sticky-cta .btn {
+                padding: 6px 16px;
+                font-size: var(--text-xs);
+            }
         }
-        @media(max-width:640px){ .sticky-cta { flex-wrap: wrap; justify-content: center; text-align: center; } .sticky-cta-info { width: 100%; align-items: center; } }
+
+        @media(max-width:640px) {
+            .sticky-cta {
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .sticky-cta-info {
+                width: 100%;
+                align-items: center;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Header -->
@@ -233,53 +497,69 @@
         <section class="b2f-section hero-section-bg">
             <div class="container">
                 <div class="hero">
-                <div class="hero-content">
-                    <span class="badge">Khoá học Chuyên sâu 10 tuần</span>
-                    <h1>BUSINESS<br>to FREEDOM</h1>
-                    <p class="hero-tagline">Tự do khi quán vận hành không cần bạn 24/7</p>
-                    <p style="font-size:var(--text-lg)">Đam mê và Lợi nhuận là nền tảng, nhưng Tự do mới là đích đến. Hãy để chương trình 10 tuần Business to Freedom dẫn bạn đến nơi đó.</p>
-                    
-                    <div class="hero-info">
-                        <div class="hero-info-item">
-                            <span>Lịch học</span>
-                            <span>10:00–12:00 Thứ 6</span>
-                        </div>
-                        <div class="hero-info-item">
-                            <span>Khai giảng (K3)</span>
-                            <span>27/03/2026</span>
-                        </div>
-                        <div class="hero-info-item">
-                            <span>Chi phí</span>
-                            <span style="color:var(--b2f-gold)">15.000.000 VNĐ</span>
-                        </div>
-                    </div>
-                    <p style="font-size: var(--text-sm); font-style: italic; color: var(--b2f-gold)">* Khoá học chỉ nhận tối đa 10 học viên để đảm bảo chất lượng</p>
+                    <div class="hero-content">
+                        <span class="badge">Khoá học Chuyên sâu 10 tuần</span>
+                        <h1>BUSINESS<br>to FREEDOM</h1>
+                        <p class="hero-tagline">Tự do khi quán vận hành không cần bạn 24/7</p>
+                        <p style="font-size:var(--text-lg)">Đam mê và Lợi nhuận là nền tảng, nhưng Tự do mới là đích
+                            đến. Hãy để chương trình 10 tuần Business to Freedom dẫn bạn đến nơi đó.</p>
 
-                    <!-- Countdown Timer -->
-                    <div id="countdown-timer" style="margin-top:var(--space-4); margin-bottom:var(--space-4); display:flex; gap:10px; text-align:center;">
-                        <div style="background:rgba(255,255,255,0.1); padding:10px 15px; border-radius:8px;">
-                            <div id="cd-days" style="font-family:var(--font-heading); font-size:2rem; color:var(--b2f-gold); line-height:1;">00</div>
-                            <div style="font-size:0.75rem; text-transform:uppercase; color:rgba(255,255,255,0.7);">Ngày</div>
+                        <div class="hero-info">
+                            <div class="hero-info-item">
+                                <span>Lịch học</span>
+                                <span>10:00–12:00 Thứ 6</span>
+                            </div>
+                            <div class="hero-info-item">
+                                <span>Khai giảng (K3)</span>
+                                <span>27/03/2026</span>
+                            </div>
+                            <div class="hero-info-item">
+                                <span>Chi phí</span>
+                                <span style="color:var(--b2f-gold)">15.000.000 VNĐ</span>
+                            </div>
                         </div>
-                        <div style="background:rgba(255,255,255,0.1); padding:10px 15px; border-radius:8px;">
-                            <div id="cd-hours" style="font-family:var(--font-heading); font-size:2rem; color:var(--b2f-gold); line-height:1;">00</div>
-                            <div style="font-size:0.75rem; text-transform:uppercase; color:rgba(255,255,255,0.7);">Giờ</div>
-                        </div>
-                        <div style="background:rgba(255,255,255,0.1); padding:10px 15px; border-radius:8px;">
-                            <div id="cd-mins" style="font-family:var(--font-heading); font-size:2rem; color:var(--b2f-gold); line-height:1;">00</div>
-                            <div style="font-size:0.75rem; text-transform:uppercase; color:rgba(255,255,255,0.7);">Phút</div>
-                        </div>
-                        <div style="background:rgba(255,255,255,0.1); padding:10px 15px; border-radius:8px;">
-                            <div id="cd-secs" style="font-family:var(--font-heading); font-size:2rem; color:var(--b2f-orange); line-height:1;">00</div>
-                            <div style="font-size:0.75rem; text-transform:uppercase; color:rgba(255,255,255,0.7);">Giây</div>
-                        </div>
-                    </div>
+                        <p style="font-size: var(--text-sm); font-style: italic; color: var(--b2f-gold)">* Khoá học chỉ
+                            nhận tối đa 10 học viên để đảm bảo chất lượng</p>
 
-                    <a href="lien-he.html" class="btn btn-primary" style="margin-top: var(--space-4)">ĐĂNG KÍ NGAY</a>
-                </div>
-                <div class="hero-img-wrap">
-                    <img src="assets/dv2/hero-coach.png" alt="Coach Loan Vũ" class="hero-img">
-                </div>
+                        <!-- Countdown Timer -->
+                        <div id="countdown-timer"
+                            style="margin-top:var(--space-4); margin-bottom:var(--space-4); display:flex; gap:10px; text-align:center;">
+                            <div style="background:rgba(255,255,255,0.1); padding:10px 15px; border-radius:8px;">
+                                <div id="cd-days"
+                                    style="font-family:var(--font-heading); font-size:2rem; color:var(--b2f-gold); line-height:1;">
+                                    00</div>
+                                <div style="font-size:0.75rem; text-transform:uppercase; color:rgba(255,255,255,0.7);">
+                                    Ngày</div>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.1); padding:10px 15px; border-radius:8px;">
+                                <div id="cd-hours"
+                                    style="font-family:var(--font-heading); font-size:2rem; color:var(--b2f-gold); line-height:1;">
+                                    00</div>
+                                <div style="font-size:0.75rem; text-transform:uppercase; color:rgba(255,255,255,0.7);">
+                                    Giờ</div>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.1); padding:10px 15px; border-radius:8px;">
+                                <div id="cd-mins"
+                                    style="font-family:var(--font-heading); font-size:2rem; color:var(--b2f-gold); line-height:1;">
+                                    00</div>
+                                <div style="font-size:0.75rem; text-transform:uppercase; color:rgba(255,255,255,0.7);">
+                                    Phút</div>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.1); padding:10px 15px; border-radius:8px;">
+                                <div id="cd-secs"
+                                    style="font-family:var(--font-heading); font-size:2rem; color:var(--b2f-orange); line-height:1;">
+                                    00</div>
+                                <div style="font-size:0.75rem; text-transform:uppercase; color:rgba(255,255,255,0.7);">
+                                    Giây</div>
+                            </div>
+                        </div>
+
+                        <a href="lien-he.html" class="btn btn-primary" style="margin-top: var(--space-4)">ĐĂNG KÍ
+                            NGAY</a>
+                    </div>
+                    <div class="hero-img-wrap">
+                        <img src="assets/dv2/hero-coach.png" alt="Coach Loan Vũ" class="hero-img">
+                    </div>
                 </div><!-- /.hero -->
             </div><!-- /.container -->
         </section>
@@ -295,32 +575,38 @@
                     <div class="b2f-card" data-reveal>
                         <div class="b2f-card-icon">01</div>
                         <h4>ĐAM MÊ NHƯNG MƠ HỒ</h4>
-                        <p>Bạn yêu ẩm thực, mơ một ngày có quán riêng. Nhưng khi bắt tay vào, bạn không biết viết kế hoạch ra sao, vốn bao nhiêu là đủ, và khách hàng mục tiêu thực sự là ai.</p>
+                        <p>Bạn yêu ẩm thực, mơ một ngày có quán riêng. Nhưng khi bắt tay vào, bạn không biết viết kế
+                            hoạch ra sao, vốn bao nhiêu là đủ, và khách hàng mục tiêu thực sự là ai.</p>
                     </div>
                     <div class="b2f-card" data-reveal>
                         <div class="b2f-card-icon">02</div>
                         <h4>DOANH THU BẤP BÊNH</h4>
-                        <p>Quán của bạn có ngày đông khách, có ngày lại vắng hoe. Dù làm rất nhiều nhưng cuối tháng nhìn vào sổ sách thì lời lãi chẳng thấy đâu.</p>
+                        <p>Quán của bạn có ngày đông khách, có ngày lại vắng hoe. Dù làm rất nhiều nhưng cuối tháng nhìn
+                            vào sổ sách thì lời lãi chẳng thấy đâu.</p>
                     </div>
                     <div class="b2f-card" data-reveal>
                         <div class="b2f-card-icon">03</div>
                         <h4>CHI PHÍ ĐỘI LÊN</h4>
-                        <p>Tiền thuê mặt bằng, nhân sự, nguyên liệu... liên tục "ăn mòn" lợi nhuận. Bạn thấy dòng tiền chảy ra nhiều hơn chảy vào nhưng không rõ nguyên nhân.</p>
+                        <p>Tiền thuê mặt bằng, nhân sự, nguyên liệu... liên tục "ăn mòn" lợi nhuận. Bạn thấy dòng tiền
+                            chảy ra nhiều hơn chảy vào nhưng không rõ nguyên nhân.</p>
                     </div>
                     <div class="b2f-card" data-reveal>
                         <div class="b2f-card-icon">04</div>
                         <h4>NHÂN SỰ BẤT ỔN</h4>
-                        <p>Nhân viên mới vào rồi lại nghỉ. Bạn vừa đào tạo xong một người thì họ lại bỏ đi. Quán thiếu người, còn bạn thì kiệt sức vì phải làm tất cả mọi việc.</p>
+                        <p>Nhân viên mới vào rồi lại nghỉ. Bạn vừa đào tạo xong một người thì họ lại bỏ đi. Quán thiếu
+                            người, còn bạn thì kiệt sức vì phải làm tất cả mọi việc.</p>
                     </div>
                     <div class="b2f-card" data-reveal>
                         <div class="b2f-card-icon">05</div>
                         <h4>BỊ CUỐN 24/7</h4>
-                        <p>Bạn giống như "nô lệ" của quán mình. Ngày nào cũng quần quật, không còn thời gian cho gia đình, bạn bè, hay cho chính bản thân.</p>
+                        <p>Bạn giống như "nô lệ" của quán mình. Ngày nào cũng quần quật, không còn thời gian cho gia
+                            đình, bạn bè, hay cho chính bản thân.</p>
                     </div>
                     <div class="b2f-card" data-reveal>
                         <div class="b2f-card-icon">06</div>
                         <h4>THẤT BẠI VÀ HOANG MANG</h4>
-                        <p>Có thể bạn đã từng đóng cửa một quán trước đây. Nỗi đau còn đó, và bạn vẫn tự hỏi: "Nếu mình làm lại lần nữa, liệu có khác không?"</p>
+                        <p>Có thể bạn đã từng đóng cửa một quán trước đây. Nỗi đau còn đó, và bạn vẫn tự hỏi: "Nếu mình
+                            làm lại lần nữa, liệu có khác không?"</p>
                     </div>
                 </div>
             </div>
@@ -337,25 +623,29 @@
                     <div class="timeline-item" data-reveal>
                         <div>
                             <h4 style="color:#fff; margin-bottom:8px;">NGƯỜI CHUẨN BỊ KHỞI NGHIỆP F&B</h4>
-                            <p>Bạn có <strong>đam mê nhưng chưa bắt đầu</strong>. Bạn muốn đi bài bản ngay từ đầu, có bản đồ rõ ràng để tiết kiệm thời gian, tiền bạc.</p>
+                            <p>Bạn có <strong>đam mê nhưng chưa bắt đầu</strong>. Bạn muốn đi bài bản ngay từ đầu, có
+                                bản đồ rõ ràng để tiết kiệm thời gian, tiền bạc.</p>
                         </div>
                     </div>
                     <div class="timeline-item" data-reveal>
                         <div>
                             <h4 style="color:#fff; margin-bottom:8px;">CHỦ QUÁN ĐANG VẬN HÀNH</h4>
-                            <p>Bạn đã mở quán, nhưng đang <strong>loay hoay với doanh thu, chi phí và nhân sự</strong>. Bạn muốn tìm một cách vận hành bài bản để quán ổn định, lợi nhuận rõ ràng.</p>
+                            <p>Bạn đã mở quán, nhưng đang <strong>loay hoay với doanh thu, chi phí và nhân sự</strong>.
+                                Bạn muốn tìm một cách vận hành bài bản để quán ổn định, lợi nhuận rõ ràng.</p>
                         </div>
                     </div>
                     <div class="timeline-item" data-reveal>
                         <div>
                             <h4 style="color:#fff; margin-bottom:8px;">TỪNG THẤT BẠI & MUỐN LÀM LẠI</h4>
-                            <p>Bạn đã <strong>từng đóng cửa một quán</strong> nhưng vẫn đam mê khởi nghiệp với một lộ trình có hệ thống, với sự đồng hành của một coach thực chiến.</p>
+                            <p>Bạn đã <strong>từng đóng cửa một quán</strong> nhưng vẫn đam mê khởi nghiệp với một lộ
+                                trình có hệ thống, với sự đồng hành của một coach thực chiến.</p>
                         </div>
                     </div>
                     <div class="timeline-item" data-reveal>
                         <div>
                             <h4 style="color:#fff; margin-bottom:8px;">NGƯỜI KHAO KHÁT TỰ DO</h4>
-                            <p>Bạn muốn <strong>xây dựng một mô hình F&B có lợi nhuận bền vững</strong> để bạn vừa kinh doanh hiệu quả, vừa có một cuộc đời tự do.</p>
+                            <p>Bạn muốn <strong>xây dựng một mô hình F&B có lợi nhuận bền vững</strong> để bạn vừa kinh
+                                doanh hiệu quả, vừa có một cuộc đời tự do.</p>
                         </div>
                     </div>
                 </div>
@@ -369,21 +659,25 @@
                     <h2>3 giá trị bạn sẽ nhận được</h2>
                     <div class="b2f-divider"></div>
                 </div>
-                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-6);">
+                <div
+                    style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-6);">
                     <div class="b2f-card" data-reveal style="text-align: center;">
                         <h3 style="color:var(--b2f-orange); font-size:3rem; margin-bottom:var(--space-4)">M</h3>
                         <h4 style="color:#fff">MONEY – LỢI NHUẬN</h4>
-                        <p>Bạn học cách xây dựng một mô hình kinh doanh có lợi nhuận rõ ràng. Biết quản lý chi phí, định giá đúng, kiểm soát Prime Cost, và tạo ra dòng tiền ổn định.</p>
+                        <p>Bạn học cách xây dựng một mô hình kinh doanh có lợi nhuận rõ ràng. Biết quản lý chi phí, định
+                            giá đúng, kiểm soát Prime Cost, và tạo ra dòng tiền ổn định.</p>
                     </div>
                     <div class="b2f-card" data-reveal style="text-align: center;">
                         <h3 style="color:var(--b2f-orange); font-size:3rem; margin-bottom:var(--space-4)">M</h3>
                         <h4 style="color:#fff">MEANING – Ý NGHĨA</h4>
-                        <p>Kinh doanh không chỉ là bán món ăn. Đó là hành trình bạn gửi gắm niềm đam mê, giá trị và dấu ấn cá nhân, để mỗi bữa ăn trở thành một trải nghiệm mang ý nghĩa.</p>
+                        <p>Kinh doanh không chỉ là bán món ăn. Đó là hành trình bạn gửi gắm niềm đam mê, giá trị và dấu
+                            ấn cá nhân, để mỗi bữa ăn trở thành một trải nghiệm mang ý nghĩa.</p>
                     </div>
                     <div class="b2f-card" data-reveal style="text-align: center;">
                         <h3 style="color:var(--b2f-orange); font-size:3rem; margin-bottom:var(--space-4)">F</h3>
                         <h4 style="color:#fff">FREEDOM – TỰ DO</h4>
-                        <p>Không còn bị trói chặt 24/7 trong quán. Với kế hoạch, đội ngũ và quy trình rõ ràng, bạn có thể vừa vận hành kinh doanh, vừa tận hưởng tự do.</p>
+                        <p>Không còn bị trói chặt 24/7 trong quán. Với kế hoạch, đội ngũ và quy trình rõ ràng, bạn có
+                            thể vừa vận hành kinh doanh, vừa tận hưởng tự do.</p>
                     </div>
                 </div>
             </div>
@@ -401,40 +695,61 @@
                         <ul style="display:flex; flex-direction:column; gap:var(--space-6);">
                             <li>
                                 <h4 style="color:var(--b2f-gold)">Người đồng hành: Vũ Kiều Loan</h4>
-                                <p>Hơn 15 năm trong ngành F&B, gần 10 năm khởi nghiệp, hiện là chủ chuỗi nhà hàng Mỹ tại Hà Nội. ICF PCC Coach quốc tế, tác giả sách.</p>
+                                <p>Hơn 15 năm trong ngành F&B, gần 10 năm khởi nghiệp, hiện là chủ chuỗi nhà hàng Mỹ tại
+                                    Hà Nội. ICF PCC Coach quốc tế, tác giả sách.</p>
                             </li>
                             <li>
                                 <h4 style="color:var(--b2f-gold)">Kiến thức thực chiến</h4>
-                                <p>Tất cả bài học đến từ chính mô hình mà Loan đã vận hành thành công. Không phải lý thuyết sách vở, mà là những công cụ, quy trình có thể áp dụng ngay.</p>
+                                <p>Tất cả bài học đến từ chính mô hình mà Loan đã vận hành thành công. Không phải lý
+                                    thuyết sách vở, mà là những công cụ, quy trình có thể áp dụng ngay.</p>
                             </li>
                             <li>
                                 <h4 style="color:var(--b2f-gold)">Cộng đồng đồng hành</h4>
-                                <p>Bạn sẽ được kết nối với các học viên khác trong lớp. Một cộng đồng đủ nhỏ để sâu sát, đủ đa dạng để học hỏi lẫn nhau.</p>
+                                <p>Bạn sẽ được kết nối với các học viên khác trong lớp. Một cộng đồng đủ nhỏ để sâu sát,
+                                    đủ đa dạng để học hỏi lẫn nhau.</p>
                             </li>
                         </ul>
                     </div>
                     <div>
                         <div class="b2f-card" style="background:#0a1828;">
-                            <h3 style="color:#fff; text-align:center; margin-bottom:var(--space-6)">So sánh với Passion to Profit</h3>
-                            
+                            <h3 style="color:#fff; text-align:center; margin-bottom:var(--space-6)">So sánh với Passion
+                                to Profit</h3>
+
                             <table style="width:100%; border-collapse:collapse; color:#fff; font-size:var(--text-sm)">
                                 <tr>
-                                    <th style="padding:var(--space-2); border-bottom:1px solid var(--b2f-border); text-align:left; color:#94A3B8; width:20%"></th>
-                                    <th style="padding:var(--space-2); border-bottom:1px solid var(--b2f-border); text-align:left; color:var(--b2f-gold); width:40%">P2P (2 ngày)</th>
-                                    <th style="padding:var(--space-2); border-bottom:1px solid var(--b2f-border); text-align:left; color:var(--b2f-orange); width:40%">Business to Freedom (10 tuần)</th>
+                                    <th
+                                        style="padding:var(--space-2); border-bottom:1px solid var(--b2f-border); text-align:left; color:#94A3B8; width:20%">
+                                    </th>
+                                    <th
+                                        style="padding:var(--space-2); border-bottom:1px solid var(--b2f-border); text-align:left; color:var(--b2f-gold); width:40%">
+                                        P2P (2 ngày)</th>
+                                    <th
+                                        style="padding:var(--space-2); border-bottom:1px solid var(--b2f-border); text-align:left; color:var(--b2f-orange); width:40%">
+                                        Business to Freedom (10 tuần)</th>
                                 </tr>
                                 <tr>
-                                    <td style="padding:var(--space-4) var(--space-2); border-bottom:1px solid var(--b2f-border); font-weight:600;">Nội dung</td>
-                                    <td style="padding:var(--space-4) var(--space-2); border-bottom:1px solid var(--b2f-border); opacity:0.8;">Giới thiệu tổng quan lộ trình 5P</td>
-                                    <td style="padding:var(--space-4) var(--space-2); border-bottom:1px solid var(--b2f-border);">Đào sâu từng P, xây dựng kế hoạch, set up SOP, chỉ số tài chính</td>
+                                    <td
+                                        style="padding:var(--space-4) var(--space-2); border-bottom:1px solid var(--b2f-border); font-weight:600;">
+                                        Nội dung</td>
+                                    <td
+                                        style="padding:var(--space-4) var(--space-2); border-bottom:1px solid var(--b2f-border); opacity:0.8;">
+                                        Giới thiệu tổng quan lộ trình 5P</td>
+                                    <td
+                                        style="padding:var(--space-4) var(--space-2); border-bottom:1px solid var(--b2f-border);">
+                                        Đào sâu từng P, xây dựng kế hoạch, set up SOP, chỉ số tài chính</td>
                                 </tr>
                                 <tr>
                                     <td style="padding:var(--space-4) var(--space-2); font-weight:600;">Mục đích</td>
-                                    <td style="padding:var(--space-4) var(--space-2); opacity:0.8;">Biết mình có phù hợp kinh doanh nhà hàng không</td>
-                                    <td style="padding:var(--space-4) var(--space-2);">Lên chi tiết bản kế hoạch kinh doanh và vận hành tối ưu</td>
+                                    <td style="padding:var(--space-4) var(--space-2); opacity:0.8;">Biết mình có phù hợp
+                                        kinh doanh nhà hàng không</td>
+                                    <td style="padding:var(--space-4) var(--space-2);">Lên chi tiết bản kế hoạch kinh
+                                        doanh và vận hành tối ưu</td>
                                 </tr>
                             </table>
-                            <p style="margin-top:var(--space-6); font-style:italic; text-align:center; color:var(--b2f-gold)">"Nếu coi Passion to Profit là tấm bản đồ, thì Business to Freedom chính là hành trình thực tế có người dẫn đường và cả tập thể đi cùng bạn."</p>
+                            <p
+                                style="margin-top:var(--space-6); font-style:italic; text-align:center; color:var(--b2f-gold)">
+                                "Nếu coi Passion to Profit là tấm bản đồ, thì Business to Freedom chính là hành trình
+                                thực tế có người dẫn đường và cả tập thể đi cùng bạn."</p>
                         </div>
                     </div>
                 </div>
@@ -453,42 +768,48 @@
                         <div class="timeline-week">01</div>
                         <div>
                             <h4 style="color:#fff;">Bản đồ 5P rõ ràng</h4>
-                            <p>Khung chiến lược: Passion, Plan, Product, People & Process, Profit giúp bạn biết đang ở đâu và từng bước biến đam mê thành lợi nhuận.</p>
+                            <p>Khung chiến lược: Passion, Plan, Product, People & Process, Profit giúp bạn biết đang ở
+                                đâu và từng bước biến đam mê thành lợi nhuận.</p>
                         </div>
                     </div>
                     <div class="timeline-item" data-reveal>
                         <div class="timeline-week">02</div>
                         <div>
                             <h4 style="color:#fff;">Kế hoạch kinh doanh khả thi</h4>
-                            <p>Dự toán vốn, tính toán điểm hòa vốn. Mọi con số rõ ràng để bạn tự tin gọi vốn hoặc đầu tư chính xác.</p>
+                            <p>Dự toán vốn, tính toán điểm hòa vốn. Mọi con số rõ ràng để bạn tự tin gọi vốn hoặc đầu tư
+                                chính xác.</p>
                         </div>
                     </div>
                     <div class="timeline-item" data-reveal>
                         <div class="timeline-week">03</div>
                         <div>
                             <h4 style="color:#fff;">Menu chiến lược & Trải nghiệm</h4>
-                            <p>Biết cách chọn món, định giá, thiết kế menu để vừa thu hút khách, vừa đảm bảo lợi nhuận tối đa.</p>
+                            <p>Biết cách chọn món, định giá, thiết kế menu để vừa thu hút khách, vừa đảm bảo lợi nhuận
+                                tối đa.</p>
                         </div>
                     </div>
                     <div class="timeline-item" data-reveal>
                         <div class="timeline-week">04</div>
                         <div>
                             <h4 style="color:#fff;">Hệ thống quy trình SOP</h4>
-                            <p>Thiết kế quy trình chuẩn để nhân sự làm việc hiệu quả, giảm thất thoát, quán có thể chạy tự động.</p>
+                            <p>Thiết kế quy trình chuẩn để nhân sự làm việc hiệu quả, giảm thất thoát, quán có thể chạy
+                                tự động.</p>
                         </div>
                     </div>
                     <div class="timeline-item" data-reveal>
                         <div class="timeline-week">05</div>
                         <div>
                             <h4 style="color:#fff;">Bộ công cụ quản trị tài chính</h4>
-                            <p>Đọc & hiểu báo cáo P&L, kiểm soát Prime Cost, áp dụng Menu Engineering. Quản lý minh bạch dòng tiền.</p>
+                            <p>Đọc & hiểu báo cáo P&L, kiểm soát Prime Cost, áp dụng Menu Engineering. Quản lý minh bạch
+                                dòng tiền.</p>
                         </div>
                     </div>
                     <div class="timeline-item" data-reveal>
                         <div class="timeline-week">06</div>
                         <div>
                             <h4 style="color:#fff;">Feedback 1:1 trực tiếp từ Loan</h4>
-                            <p>Mỗi tuần thực hành, đặt câu hỏi, nhận phản hồi trực tiếp để gỡ bỏ vướng mắc ngay tại chỗ.</p>
+                            <p>Mỗi tuần thực hành, đặt câu hỏi, nhận phản hồi trực tiếp để gỡ bỏ vướng mắc ngay tại chỗ.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -503,16 +824,76 @@
                     <div class="b2f-divider"></div>
                 </div>
                 <div class="timeline">
-                    <div class="timeline-item" data-reveal><div class="timeline-week">Tuần 1</div><div><h4 style="color:#fff; margin:0">Passion</h4><p style="margin:0">Vai trò chủ quán & Bản đồ đam mê</p></div></div>
-                    <div class="timeline-item" data-reveal><div class="timeline-week">Tuần 2</div><div><h4 style="color:#fff; margin:0">Plan</h4><p style="margin:0">Khởi điểm, lựa chọn mô hình, phát triển ý tưởng</p></div></div>
-                    <div class="timeline-item" data-reveal><div class="timeline-week">Tuần 3</div><div><h4 style="color:#fff; margin:0">Plan</h4><p style="margin:0">Kế hoạch tài chính & dự toán vốn</p></div></div>
-                    <div class="timeline-item" data-reveal><div class="timeline-week">Tuần 4</div><div><h4 style="color:#fff; margin:0">Product</h4><p style="margin:0">Thực đơn: xây dựng, định giá, thiết kế</p></div></div>
-                    <div class="timeline-item" data-reveal><div class="timeline-week">Tuần 5</div><div><h4 style="color:#fff; margin:0">Product</h4><p style="margin:0">Mặt bằng & Trải nghiệm khách hàng</p></div></div>
-                    <div class="timeline-item" data-reveal><div class="timeline-week">Tuần 6</div><div><h4 style="color:#fff; margin:0">People</h4><p style="margin:0">Vai trò chủ quán, phân tích năng lực & mục tiêu</p></div></div>
-                    <div class="timeline-item" data-reveal><div class="timeline-week">Tuần 7</div><div><h4 style="color:#fff; margin:0">People</h4><p style="margin:0">Kế hoạch nhân sự, JD & sơ đồ đội nhóm ban đầu</p></div></div>
-                    <div class="timeline-item" data-reveal><div class="timeline-week">Tuần 8</div><div><h4 style="color:#fff; margin:0">Process</h4><p style="margin:0">Thiết kế quy trình FOH, BOH, toàn quán</p></div></div>
-                    <div class="timeline-item" data-reveal><div class="timeline-week">Tuần 9</div><div><h4 style="color:#fff; margin:0">Profit</h4><p style="margin:0">Các chỉ số tài chính cốt lõi & công thức lợi nhuận</p></div></div>
-                    <div class="timeline-item" data-reveal><div class="timeline-week">Tuần 10</div><div><h4 style="color:#fff; margin:0">Tổng kết</h4><p style="margin:0">Thuyết trình thành quả và Định hướng bước tới</p></div></div>
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-week">Tuần 1</div>
+                        <div>
+                            <h4 style="color:#fff; margin:0">Passion</h4>
+                            <p style="margin:0">Vai trò chủ quán & Bản đồ đam mê</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-week">Tuần 2</div>
+                        <div>
+                            <h4 style="color:#fff; margin:0">Plan</h4>
+                            <p style="margin:0">Khởi điểm, lựa chọn mô hình, phát triển ý tưởng</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-week">Tuần 3</div>
+                        <div>
+                            <h4 style="color:#fff; margin:0">Plan</h4>
+                            <p style="margin:0">Kế hoạch tài chính & dự toán vốn</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-week">Tuần 4</div>
+                        <div>
+                            <h4 style="color:#fff; margin:0">Product</h4>
+                            <p style="margin:0">Thực đơn: xây dựng, định giá, thiết kế</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-week">Tuần 5</div>
+                        <div>
+                            <h4 style="color:#fff; margin:0">Product</h4>
+                            <p style="margin:0">Mặt bằng & Trải nghiệm khách hàng</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-week">Tuần 6</div>
+                        <div>
+                            <h4 style="color:#fff; margin:0">People</h4>
+                            <p style="margin:0">Vai trò chủ quán, phân tích năng lực & mục tiêu</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-week">Tuần 7</div>
+                        <div>
+                            <h4 style="color:#fff; margin:0">People</h4>
+                            <p style="margin:0">Kế hoạch nhân sự, JD & sơ đồ đội nhóm ban đầu</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-week">Tuần 8</div>
+                        <div>
+                            <h4 style="color:#fff; margin:0">Process</h4>
+                            <p style="margin:0">Thiết kế quy trình FOH, BOH, toàn quán</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-week">Tuần 9</div>
+                        <div>
+                            <h4 style="color:#fff; margin:0">Profit</h4>
+                            <p style="margin:0">Các chỉ số tài chính cốt lõi & công thức lợi nhuận</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-week">Tuần 10</div>
+                        <div>
+                            <h4 style="color:#fff; margin:0">Tổng kết</h4>
+                            <p style="margin:0">Thuyết trình thành quả và Định hướng bước tới</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -524,42 +905,61 @@
                     <h2>Học viên nói gì về Business to Freedom</h2>
                     <div class="b2f-divider"></div>
                 </div>
-                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-6);">
+                <div
+                    style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-6);">
                     <div class="b2f-card" data-reveal>
-                        <div class="testi-img-wrap"><img src="assets/dv2/t1-caolan.png" class="testi-img" alt="Cao Lan" loading="lazy" /></div>
+                        <div class="testi-img-wrap"><img src="assets/dv2/t1-caolan.png" class="testi-img" alt="Cao Lan"
+                                loading="lazy" /></div>
                         <h4 style="color:var(--b2f-gold)">Cao Lan</h4>
-                        <p style="font-size:var(--text-sm); font-weight:600; color:#fff">Chủ nhà hàng Việt ở Paris, Pháp</p>
-                        <p class="testi-quote">"Dù khoá học bắt đầu lúc 2h sáng theo giờ Pháp, chị vẫn thấy rất hào hứng. Giá trị nhất là mọi thứ không còn mơ hồ. Mình biết cái gì đang thiếu và cần thay đổi. Thay đổi đầu tiên chính là áp dụng các quy trình chuẩn cho quán."</p>
+                        <p style="font-size:var(--text-sm); font-weight:600; color:#fff">Chủ nhà hàng Việt ở Paris, Pháp
+                        </p>
+                        <p class="testi-quote">"Dù khoá học bắt đầu lúc 2h sáng theo giờ Pháp, chị vẫn thấy rất hào
+                            hứng. Giá trị nhất là mọi thứ không còn mơ hồ. Mình biết cái gì đang thiếu và cần thay đổi.
+                            Thay đổi đầu tiên chính là áp dụng các quy trình chuẩn cho quán."</p>
                     </div>
                     <div class="b2f-card" data-reveal>
-                        <div class="testi-img-wrap"><img src="assets/dv2/t1-phamhieu.png" class="testi-img" alt="Phạm Hiếu" loading="lazy" /></div>
+                        <div class="testi-img-wrap"><img src="assets/dv2/t1-phamhieu.png" class="testi-img"
+                                alt="Phạm Hiếu" loading="lazy" /></div>
                         <h4 style="color:var(--b2f-gold)">Phạm Hiếu</h4>
-                        <p style="font-size:var(--text-sm); font-weight:600; color:#fff">Chủ tiệm cafe Việt ở Virginia, Mỹ</p>
-                        <p class="testi-quote">"Khoá học chính là công cụ, là bản đồ để dù mình đang làm gì thì cũng có thể quay lại đối chiếu xem mình đã làm đúng hay chưa. Dù kinh doanh bao lâu, mình vẫn cần soi chiếu lại để tìm hướng đi đúng."</p>
+                        <p style="font-size:var(--text-sm); font-weight:600; color:#fff">Chủ tiệm cafe Việt ở Virginia,
+                            Mỹ</p>
+                        <p class="testi-quote">"Khoá học chính là công cụ, là bản đồ để dù mình đang làm gì thì cũng có
+                            thể quay lại đối chiếu xem mình đã làm đúng hay chưa. Dù kinh doanh bao lâu, mình vẫn cần
+                            soi chiếu lại để tìm hướng đi đúng."</p>
                     </div>
                     <div class="b2f-card" data-reveal>
-                        <div class="testi-img-wrap"><img src="assets/dv2/t1-thanhnga.png" class="testi-img" alt="Thanh Nga" loading="lazy" /></div>
+                        <div class="testi-img-wrap"><img src="assets/dv2/t1-thanhnga.png" class="testi-img"
+                                alt="Thanh Nga" loading="lazy" /></div>
                         <h4 style="color:var(--b2f-gold)">Thanh Nga</h4>
-                        <p style="font-size:var(--text-sm); font-weight:600; color:#fff">Chủ quán trà trái cây Bảo Lộc</p>
-                        <p class="testi-quote">"Bước tiến của em là vận hành được quán và để dành được lợi nhuận. Dù quán nhỏ, em đã bắt đầu bằng một kế hoạch kinh doanh hoàn chỉnh. Mọi thứ đang vận hành đúng như mong muốn và tự hào về bản thân."</p>
+                        <p style="font-size:var(--text-sm); font-weight:600; color:#fff">Chủ quán trà trái cây Bảo Lộc
+                        </p>
+                        <p class="testi-quote">"Bước tiến của em là vận hành được quán và để dành được lợi nhuận. Dù
+                            quán nhỏ, em đã bắt đầu bằng một kế hoạch kinh doanh hoàn chỉnh. Mọi thứ đang vận hành đúng
+                            như mong muốn và tự hào về bản thân."</p>
                     </div>
                     <div class="b2f-card" data-reveal>
-                        <div class="testi-img-wrap"><img src="assets/dv2/t1_lananh.png" class="testi-img" alt="Lân Anh" loading="lazy" /></div>
+                        <div class="testi-img-wrap"><img src="assets/dv2/t1_lananh.png" class="testi-img" alt="Lân Anh"
+                                loading="lazy" /></div>
                         <h4 style="color:var(--b2f-gold)">Lân Anh</h4>
                         <p style="font-size:var(--text-sm); font-weight:600; color:#fff">Chủ quán cà phê TP HCM</p>
-                        <p class="testi-quote">"Đây là khóa học hiếm hoi giúp mình hiểu rõ từ ngày đầu cần chuẩn bị những gì. Loan không chỉ dạy kiến thức mà còn đồng hành như một người thầy thực sự."</p>
+                        <p class="testi-quote">"Đây là khóa học hiếm hoi giúp mình hiểu rõ từ ngày đầu cần chuẩn bị
+                            những gì. Loan không chỉ dạy kiến thức mà còn đồng hành như một người thầy thực sự."</p>
                     </div>
                     <div class="b2f-card" data-reveal>
-                        <div class="testi-img-wrap"><img src="assets/dv2/t1_lequyen.png" class="testi-img" alt="Lê Quyền" loading="lazy" /></div>
+                        <div class="testi-img-wrap"><img src="assets/dv2/t1_lequyen.png" class="testi-img"
+                                alt="Lê Quyền" loading="lazy" /></div>
                         <h4 style="color:var(--b2f-gold)">Lê Quyền</h4>
                         <p style="font-size:var(--text-sm); font-weight:600; color:#fff">Chủ cưới tiệc Hà Nội</p>
-                        <p class="testi-quote">"Sự thay đổi lớn nhất sau khóa học là mình biết tại sao quán lời mà túi tiền vẫn cạn. Từ đó tôi kiểm soát được doanh thu và có kế hoạch mở rộng."</p>
+                        <p class="testi-quote">"Sự thay đổi lớn nhất sau khóa học là mình biết tại sao quán lời mà túi
+                            tiền vẫn cạn. Từ đó tôi kiểm soát được doanh thu và có kế hoạch mở rộng."</p>
                     </div>
                     <div class="b2f-card" data-reveal>
-                        <div class="testi-img-wrap"><img src="assets/dv2/t1_phuongnabi.png" class="testi-img" alt="Phương Nabi" loading="lazy" /></div>
+                        <div class="testi-img-wrap"><img src="assets/dv2/t1_phuongnabi.png" class="testi-img"
+                                alt="Phương Nabi" loading="lazy" /></div>
                         <h4 style="color:var(--b2f-gold)">Phương Nabi</h4>
                         <p style="font-size:var(--text-sm); font-weight:600; color:#fff">Chủ nhà hàng Fusion TP HCM</p>
-                        <p class="testi-quote">"Loan giúp tôi thấy rõ mô hình thực sự đang hoạt động như thế nào, cà phê hóa nào đang một mình gánh tổn thất. Chưa được phân tích như vậy hết."</p>
+                        <p class="testi-quote">"Loan giúp tôi thấy rõ mô hình thực sự đang hoạt động như thế nào, cà phê
+                            hóa nào đang một mình gánh tổn thất. Chưa được phân tích như vậy hết."</p>
                     </div>
                 </div>
             </div>
@@ -569,34 +969,47 @@
         <section class="b2f-section">
             <div class="container target-grid" style="align-items: center;">
                 <div class="hero-img-wrap" data-reveal>
-                    <img src="assets/dv2/hero-coach.png" alt="Vũ Kiều Loan" class="hero-img" style="border-radius: var(--radius-full); aspect-ratio: 1; object-fit: cover; max-width: 400px; border: 4px solid var(--b2f-gold)">
+                    <img src="assets/dv1/instructor_2.jpg" alt="Vũ Kiều Loan" class="hero-img"
+                        style="border-radius: var(--radius-full); aspect-ratio: 1; object-fit: cover; max-width: 400px; border: 4px solid var(--b2f-gold)">
                 </div>
                 <div class="hero-content" data-reveal>
                     <div class="section-header" style="text-align: left; margin-bottom: var(--space-6);">
                         <h2>Ai là người đồng hành cùng bạn?</h2>
                         <div class="b2f-divider" style="margin-left: 0;"></div>
                     </div>
-                    <h3 style="color: #fff; margin-bottom: var(--space-4);">Vũ Kiều Loan <span style="font-size: var(--text-base); color: var(--b2f-gold); display: block; font-weight: normal; margin-top: 4px;">F&B Startup Coach, ICF PCC</span></h3>
-                    
+                    <h3 style="color: #fff; margin-bottom: var(--space-4);">Vũ Kiều Loan <span
+                            style="font-size: var(--text-base); color: var(--b2f-gold); display: block; font-weight: normal; margin-top: 4px;">F&B
+                            Startup Coach, ICF PCC</span></h3>
+
                     <ul style="display:flex; flex-direction:column; gap:var(--space-4); margin-bottom:var(--space-6)">
                         <li style="display:flex; gap:var(--space-4); align-items:flex-start;">
                             <span style="color:var(--b2f-orange); font-size:1.5rem; line-height:1">✓</span>
-                            <p style="margin:0">16 năm trong ngành F&B & Hospitality tại Mỹ và Việt Nam.</p>
+                            <p style="margin:0">Hơn 15 năm trong ngành F&B & Hospitality tại cả Việt Nam và Mỹ.</p>
                         </li>
                         <li style="display:flex; gap:var(--space-4); align-items:flex-start;">
                             <span style="color:var(--b2f-orange); font-size:1.5rem; line-height:1">✓</span>
-                            <p style="margin:0">10 năm khởi nghiệp: đồng sáng lập & điều hành S&L's Diner, chuỗi nhà hàng Mỹ tại Hà Nội.</p>
+                            <p style="margin:0">Gần 10 năm khởi nghiệp: đồng sáng lập & điều hành S&L's Diner, chuỗi nhà
+                                hàng Mỹ tại Hà Nội.</p>
                         </li>
                         <li style="display:flex; gap:var(--space-4); align-items:flex-start;">
                             <span style="color:var(--b2f-orange); font-size:1.5rem; line-height:1">✓</span>
-                            <p style="margin:0">ICF PCC Coach: nằm trong số ít hơn 80 người tại Việt Nam đạt chứng nhận quốc tế này. Đồng hành với hơn 50+ chủ quán qua coaching 1:1 và group coaching.</p>
+                            <p style="margin:0">ICF PCC Coach: nằm trong số ít hơn 80 người tại Việt Nam đạt chứng nhận
+                                quốc tế này. Đồng hành với hơn 50+ chủ quán qua coaching 1:1 và group coaching.</p>
                         </li>
                     </ul>
                     <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: var(--space-4);">
-                        <a href="https://www.facebook.com/loanvuk" target="_blank" rel="noopener" style="font-size:var(--text-sm); padding: 8px 16px; background: rgba(255,255,255,0.08); color:#fff; border:1px solid rgba(255,255,255,0.15); border-radius:8px; text-decoration:none;">📘 Facebook</a>
-                        <a href="https://www.instagram.com/loanvuk" target="_blank" rel="noopener" style="font-size:var(--text-sm); padding: 8px 16px; background: rgba(255,255,255,0.08); color:#fff; border:1px solid rgba(255,255,255,0.15); border-radius:8px; text-decoration:none;">📸 Instagram</a>
-                        <a href="https://www.vukieuloan.com" target="_blank" rel="noopener" style="font-size:var(--text-sm); padding: 8px 16px; background: rgba(255,255,255,0.08); color:#fff; border:1px solid rgba(255,255,255,0.15); border-radius:8px; text-decoration:none;">🌐 vukieuloan.com</a>
-                        <a href="mailto:loanvuk@gmail.com" style="font-size:var(--text-sm); padding: 8px 16px; background: rgba(255,255,255,0.08); color:#fff; border:1px solid rgba(255,255,255,0.15); border-radius:8px; text-decoration:none;">✉️ Email</a>
+                        <a href="https://www.facebook.com/loanvuk" target="_blank" rel="noopener"
+                            style="font-size:var(--text-sm); padding: 8px 16px; background: rgba(255,255,255,0.08); color:#fff; border:1px solid rgba(255,255,255,0.15); border-radius:8px; text-decoration:none;">📘
+                            Facebook</a>
+                        <a href="https://www.instagram.com/loanvuk" target="_blank" rel="noopener"
+                            style="font-size:var(--text-sm); padding: 8px 16px; background: rgba(255,255,255,0.08); color:#fff; border:1px solid rgba(255,255,255,0.15); border-radius:8px; text-decoration:none;">📸
+                            Instagram</a>
+                        <a href="https://www.vukieuloan.com" target="_blank" rel="noopener"
+                            style="font-size:var(--text-sm); padding: 8px 16px; background: rgba(255,255,255,0.08); color:#fff; border:1px solid rgba(255,255,255,0.15); border-radius:8px; text-decoration:none;">🌐
+                            vukieuloan.com</a>
+                        <a href="mailto:loanvuk@gmail.com"
+                            style="font-size:var(--text-sm); padding: 8px 16px; background: rgba(255,255,255,0.08); color:#fff; border:1px solid rgba(255,255,255,0.15); border-radius:8px; text-decoration:none;">✉️
+                            Email</a>
                     </div>
                 </div>
             </div>
@@ -612,35 +1025,60 @@
                 <div class="faq-list">
                     <div class="faq-item" data-reveal>
                         <button class="faq-q" aria-expanded="false">Chưa từng kinh doanh F&B có học được không?</button>
-                        <div class="faq-a"><p>Có. Bạn sẽ đi qua lộ trình 5P hệ thống để hiểu ngành, lập kế hoạch bài bản từ số 0, tránh các sai lầm đắt giá ngay từ đầu.</p></div>
+                        <div class="faq-a">
+                            <p>Có. Bạn sẽ đi qua lộ trình 5P hệ thống để hiểu ngành, lập kế hoạch bài bản từ số 0, tránh
+                                các sai lầm đắt giá ngay từ đầu.</p>
+                        </div>
                     </div>
                     <div class="faq-item" data-reveal>
-                        <button class="faq-q" aria-expanded="false">Đã mở quán nhưng gặp khó khăn, tôi có cần học?</button>
-                        <div class="faq-a"><p>Có. Bạn sẽ học cách rà soát lại toàn bộ, phân tích tài chính, tối ưu menu, quản lý nhân sự và xây dựng lại quy trình để quán tự vận hành được.</p></div>
+                        <button class="faq-q" aria-expanded="false">Đã mở quán nhưng gặp khó khăn, tôi có cần
+                            học?</button>
+                        <div class="faq-a">
+                            <p>Có. Bạn sẽ học cách rà soát lại toàn bộ, phân tích tài chính, tối ưu menu, quản lý nhân
+                                sự và xây dựng lại quy trình để quán tự vận hành được.</p>
+                        </div>
                     </div>
                     <div class="faq-item" data-reveal>
                         <button class="faq-q" aria-expanded="false">Tôi bận, không theo kịp hết thì sao?</button>
-                        <div class="faq-a"><p>Tất cả buổi học đều có tài liệu chi tiết, record và có thể xếp lịch coaching 1:1 với Loan để đảm bảo bạn không bị tụt lại.</p></div>
+                        <div class="faq-a">
+                            <p>Tất cả buổi học đều có tài liệu chi tiết, record và có thể xếp lịch coaching 1:1 với Loan
+                                để đảm bảo bạn không bị tụt lại.</p>
+                        </div>
                     </div>
                     <div class="faq-item" data-reveal>
                         <button class="faq-q" aria-expanded="false">Khác gì khoá Passion to Profit?</button>
-                        <div class="faq-a"><p>P2P là bước nền tảng (tổng quan định hướng). B2F là bước nâng cấp đi kèm thực hành làm bài tập, template, SOP chi tiết và coaching theo từng tuần để thực sự mở quán.</p></div>
+                        <div class="faq-a">
+                            <p>P2P là bước nền tảng (tổng quan định hướng). B2F là bước nâng cấp đi kèm thực hành làm
+                                bài tập, template, SOP chi tiết và coaching theo từng tuần để thực sự mở quán.</p>
+                        </div>
                     </div>
                     <div class="faq-item" data-reveal>
                         <button class="faq-q" aria-expanded="false">Không giỏi "số má" có theo được không?</button>
-                        <div class="faq-a"><p>Được. Các công cụ tài chính được thiết kế đơn giản, trực quan, phục vụ đúng góc nhìn của "người chủ quán" thay vì kế toán.</p></div>
+                        <div class="faq-a">
+                            <p>Được. Các công cụ tài chính được thiết kế đơn giản, trực quan, phục vụ đúng góc nhìn của
+                                "người chủ quán" thay vì kế toán.</p>
+                        </div>
                     </div>
                     <div class="faq-item" data-reveal>
                         <button class="faq-q" aria-expanded="false">Số lượng học viên thế nào?</button>
-                        <div class="faq-a"><p>Chỉ tối đa 10 học viên mỗi khoá để đảm bảo chất lượng và Loan có thể theo sát từng mô hình kinh doanh.</p></div>
+                        <div class="faq-a">
+                            <p>Chỉ tối đa 10 học viên mỗi khoá để đảm bảo chất lượng và Loan có thể theo sát từng mô
+                                hình kinh doanh.</p>
+                        </div>
                     </div>
                     <div class="faq-item" data-reveal>
                         <button class="faq-q" aria-expanded="false">Học xong có thể mở quán ngay không?</button>
-                        <div class="faq-a"><p>Có. Sân chơi B2F sẽ cung cấp cho bạn một bản thiết kế chi tiết: Kế hoạch kinh doanh, bản dự toán tài chính, menu định giá, sơ đồ nhân sự để bạn tự tin xúc tiến.</p></div>
+                        <div class="faq-a">
+                            <p>Có. Sân chơi B2F sẽ cung cấp cho bạn một bản thiết kế chi tiết: Kế hoạch kinh doanh, bản
+                                dự toán tài chính, menu định giá, sơ đồ nhân sự để bạn tự tin xúc tiến.</p>
+                        </div>
                     </div>
                     <div class="faq-item" data-reveal>
                         <button class="faq-q" aria-expanded="false">Có cung cấp tài liệu, template không?</button>
-                        <div class="faq-a"><p>Có. Trọn bộ template chuẩn bao gồm: Bảng báo cáo P&L, Menu Engineering, SOP, Checklist mở quán, Lean Canvas đã được Việt hoá và tuỳ chỉnh cho F&B.</p></div>
+                        <div class="faq-a">
+                            <p>Có. Trọn bộ template chuẩn bao gồm: Bảng báo cáo P&L, Menu Engineering, SOP, Checklist mở
+                                quán, Lean Canvas đã được Việt hoá và tuỳ chỉnh cho F&B.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -649,9 +1087,13 @@
         <!-- Section CTA (cuối) -->
         <section class="b2f-section" style="text-align: center; position: relative;">
             <div class="container" style="position: relative; z-index: 1; padding-block: var(--space-12);">
-                <h2 style="color: #fff; font-size: var(--text-4xl); margin-bottom: var(--space-4);">Bắt đầu hành trình từ Đam mê đến Tự do</h2>
-                <p style="color: var(--b2f-gold); font-size: var(--text-xl); margin-bottom: var(--space-8);">Khai giảng 27/03/2026 – Chỉ 10 chỗ/khoá</p>
-                <a href="lien-he.html" class="btn btn-primary" style="font-size: var(--text-lg); padding: var(--space-4) var(--space-12); border-radius: var(--radius-full);">ĐĂNG KÝ GIỮ CHỖ</a>
+                <h2 style="color: #fff; font-size: var(--text-4xl); margin-bottom: var(--space-4);">Bắt đầu hành trình
+                    từ Đam mê đến Tự do</h2>
+                <p style="color: var(--b2f-gold); font-size: var(--text-xl); margin-bottom: var(--space-8);">Khai giảng
+                    27/03/2026 – Chỉ 10 chỗ/khoá</p>
+                <a href="lien-he.html" class="btn btn-primary"
+                    style="font-size: var(--text-lg); padding: var(--space-4) var(--space-12); border-radius: var(--radius-full);">ĐĂNG
+                    KÝ GIỮ CHỖ</a>
             </div>
         </section>
     </main>
@@ -663,9 +1105,12 @@
     <div class="sticky-cta" role="banner" aria-label="Đăng ký nhanh">
         <div class="sticky-cta-info">
             <span class="sticky-cta-title">🔥 Business to Freedom – Khoá học F&B 10 tuần</span>
-            <span class="sticky-cta-meta">📅 Khai giảng 27/03/2026 &nbsp;·&nbsp; 🕘 10:00–12:00 Thứ 6 &nbsp;·&nbsp; 💰 15.000.000 VNĐ &nbsp;·&nbsp; Chỉ 10 chỗ</span>
+            <span class="sticky-cta-meta">📅 Khai giảng 27/03/2026 &nbsp;·&nbsp; 🕘 10:00–12:00 Thứ 6 &nbsp;·&nbsp; 💰
+                15.000.000 VNĐ &nbsp;·&nbsp; Chỉ 10 chỗ</span>
         </div>
-        <a href="lien-he.html" class="btn" style="background:#fff; color:var(--b2f-orange); white-space:nowrap; font-weight:700; flex-shrink:0;">Giữ Chỗ Ngay</a>
+        <a href="lien-he.html" class="btn"
+            style="background:#fff; color:var(--b2f-orange); white-space:nowrap; font-weight:700; flex-shrink:0;">Giữ
+            Chỗ Ngay</a>
     </div>
 
     <!-- Scripts -->
@@ -691,29 +1136,30 @@
 
         // Countdown Timer logic
         const targetDate = new Date("March 27, 2026 10:00:00").getTime();
-        
+
         function updateCountdown() {
             const now = new Date().getTime();
             const distance = targetDate - now;
-            
+
             if (distance < 0) {
                 document.getElementById('countdown-timer').innerHTML = '<div style="color:var(--b2f-orange);font-weight:bold;font-size:1.2rem;">Khoá học đã khai giảng!</div>';
                 return;
             }
-            
+
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
+
             document.getElementById('cd-days').innerText = days.toString().padStart(2, '0');
             document.getElementById('cd-hours').innerText = hours.toString().padStart(2, '0');
             document.getElementById('cd-mins').innerText = minutes.toString().padStart(2, '0');
             document.getElementById('cd-secs').innerText = seconds.toString().padStart(2, '0');
         }
-        
+
         setInterval(updateCountdown, 1000);
         updateCountdown();
     </script>
 </body>
+
 </html>
