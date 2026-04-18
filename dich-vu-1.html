@@ -28,11 +28,11 @@
 
     :root {
       --p2p-gold: #F5A623;
-      --p2p-red: #CC0000;
-      --p2p-dark: #1a1a1a;
-      --p2p-dark2: #111111;
-      --p2p-card: rgba(255, 255, 255, 0.06);
-      --p2p-border: rgba(255, 255, 255, 0.1);
+      --p2p-red: #E63946;
+      --p2p-dark: #1a0f0f;
+      --p2p-dark2: #140a0a;
+      --p2p-card: rgba(255, 255, 255, 0.05);
+      --p2p-border: rgba(255, 255, 255, 0.08);
     }
 
     /* Override shared heading color */
@@ -321,12 +321,14 @@
       color: #fff;
       font-size: var(--text-lg);
       padding: var(--space-4) var(--space-10);
+      box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+      transition: all 0.25s ease;
     }
 
     .btn-p2p-cta:hover {
-      background: #aa0000;
+      background: #c52d3a;
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(204, 0, 0, 0.4);
+      box-shadow: 0 8px 24px rgba(230, 57, 70, 0.4);
     }
 
     @media(max-width:768px) {
@@ -413,6 +415,12 @@
       border-radius: var(--radius-lg);
       padding: var(--space-6);
       border-left: 4px solid var(--p2p-red);
+      transition: all 0.25s ease;
+    }
+    .target-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      border-left-color: var(--p2p-gold);
     }
 
     .target-num {
@@ -443,6 +451,18 @@
       .target-grid {
         grid-template-columns: 1fr;
       }
+    }
+
+    /* ── Box Headings Adjustment ── */
+    .benefit-card h3, .benefit-card h4, 
+    .module-card h3, .module-card h4,
+    .target-card h3, .target-card h4,
+    .pain-card h3, .pain-card h4,
+    .step-card h3,
+    .pricing-card h3, .pricing-card h4 {
+      letter-spacing: 0.04em;
+      margin-bottom: var(--space-6) !important;
+      line-height: 1.45 !important;
     }
 
     /* ── Benefits ── */

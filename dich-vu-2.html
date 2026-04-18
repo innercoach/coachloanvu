@@ -21,7 +21,9 @@
             --b2f-gold: #F5C842;
             --b2f-orange: #E87722;
             --b2f-card: rgba(255, 255, 255, 0.05);
-            --b2f-border: rgba(255, 255, 255, 0.1);
+            --b2f-border: rgba(255, 255, 255, 0.08);
+            --b2f-glow: rgba(232, 119, 34, 0.15);
+            --b2f-easing: cubic-bezier(0.25, 1, 0.5, 1);
         }
 
         body {
@@ -64,13 +66,17 @@
         }
 
         .btn-primary {
-            background: var(--b2f-orange);
+            background: linear-gradient(135deg, var(--b2f-orange), #d06a1a);
             color: #fff;
+            box-shadow: 0 4px 15px rgba(232, 119, 34, 0.3);
+            transition: all 0.35s var(--b2f-easing);
         }
 
         .btn-primary:hover {
-            background: #cd6518;
+            background: linear-gradient(135deg, #d06a1a, var(--b2f-orange));
             color: #fff;
+            box-shadow: 0 6px 25px rgba(232, 119, 34, 0.45);
+            transform: translateY(-2px);
         }
 
         .badge {
@@ -145,7 +151,7 @@
         .b2f-divider {
             width: 60px;
             height: 3px;
-            background: var(--b2f-orange);
+            background: linear-gradient(90deg, var(--b2f-orange), var(--b2f-gold));
             margin-block: var(--space-4);
             border-radius: var(--radius-full);
         }
@@ -154,18 +160,33 @@
             margin-inline: auto;
         }
 
-        /* Card styles */
+        /* Card styles – Professional with gradient top */
         .b2f-card {
             background: var(--b2f-card);
             border: 1px solid var(--b2f-border);
             border-radius: var(--radius-lg);
             padding: var(--space-8);
-            transition: transform var(--transition);
+            transition: all 0.35s var(--b2f-easing);
+            position: relative;
+            overflow: hidden;
+        }
+        .b2f-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--b2f-orange), var(--b2f-gold));
+            opacity: 0;
+            transition: opacity 0.35s var(--b2f-easing);
         }
 
         .b2f-card:hover {
-            border-color: rgba(245, 200, 66, 0.3);
+            border-color: rgba(245, 200, 66, 0.25);
             transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.3), 0 0 20px var(--b2f-glow);
+        }
+        .b2f-card:hover::before {
+            opacity: 1;
         }
 
         .b2f-card-icon {
@@ -285,6 +306,12 @@
             padding: var(--space-4);
             border-radius: var(--radius-md);
             border-left: 3px solid var(--b2f-gold);
+            transition: all 0.35s var(--b2f-easing);
+        }
+        .timeline-item:hover {
+            border-left-color: var(--b2f-orange);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25), 0 0 15px var(--b2f-glow);
+            transform: translateX(4px);
         }
 
         .timeline-week {
@@ -383,6 +410,18 @@
         .faq-item.open .faq-a {
             padding-bottom: var(--space-4);
             max-height: 500px;
+        }
+
+        /* ── Box Headings Adjustment ── */
+        .b2f-card h3, .b2f-card h4, 
+        .timeline-item h4,
+        .pricing-card h3, .pricing-card h4,
+        .pain-card h4,
+        .target-card h3,
+        .hero-info-item span:last-child {
+            letter-spacing: 0.04em;
+            margin-bottom: var(--space-6) !important;
+            line-height: 1.45;
         }
 
         /* Sticky CTA */
