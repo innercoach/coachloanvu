@@ -206,7 +206,7 @@
     .hero-p2p {
       min-height: calc(100vh - 72px);
       display: grid;
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: 1fr 1fr;
       align-items: center;
       gap: var(--space-8);
       padding-block: var(--space-12);
@@ -417,9 +417,10 @@
       border-left: 4px solid var(--p2p-red);
       transition: all 0.25s ease;
     }
+
     .target-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       border-left-color: var(--p2p-gold);
     }
 
@@ -454,12 +455,17 @@
     }
 
     /* ── Box Headings Adjustment ── */
-    .benefit-card h3, .benefit-card h4, 
-    .module-card h3, .module-card h4,
-    .target-card h3, .target-card h4,
-    .pain-card h3, .pain-card h4,
+    .benefit-card h3,
+    .benefit-card h4,
+    .module-card h3,
+    .module-card h4,
+    .target-card h3,
+    .target-card h4,
+    .pain-card h3,
+    .pain-card h4,
     .step-card h3,
-    .pricing-card h3, .pricing-card h4 {
+    .pricing-card h3,
+    .pricing-card h4 {
       letter-spacing: 0.04em;
       margin-bottom: var(--space-6) !important;
       line-height: 1.45 !important;
