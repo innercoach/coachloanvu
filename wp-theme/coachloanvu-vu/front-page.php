@@ -40,11 +40,11 @@ h1, h2, h3, h4 { color: #fff; }
 .home-divider { width: 60px; height: 3px; background: var(--gold-accent); margin-inline: auto; margin-block: var(--space-4); opacity: 0.8; }
 
 /* Hero */
-.hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-8); align-items: center; min-height: 90vh; padding-top: 100px; }
+.hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-8); align-items: center; min-height: auto; padding-top: 110px; padding-bottom: var(--space-12); }
 .hero-content h1 { font-family: var(--font-heading); font-size: clamp(2.5rem,5vw,4.5rem); line-height: 1.1; margin-bottom: var(--space-6); background: linear-gradient(to right, #F5A623, #C9A84C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .hero-tagline { font-size: var(--text-xl); color: #E2E8F0; margin-bottom: var(--space-6); line-height: 1.6; }
 .hero-img-wrap { text-align: right; position: relative; }
-.hero-img { max-height: 700px; object-fit: contain; mask-image: linear-gradient(to bottom, black 80%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); }
+.hero-img { max-height: 560px; width: 100%; object-fit: contain; object-position: bottom right; mask-image: linear-gradient(to bottom, black 82%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 82%, transparent 100%); }
 .hero-bg-blob { position: absolute; width: 400px; height: 400px; background: var(--gold-accent); border-radius: 50%; filter: blur(100px); opacity: 0.15; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: -1; }
 
 /* Services */
@@ -64,7 +64,7 @@ h1, h2, h3, h4 { color: #fff; }
 /* About */
 .about-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: var(--space-12); align-items: center; }
 .about-img-wrap { position: relative; }
-.about-img { width: 100%; max-width: 420px; border-radius: var(--radius-lg); object-fit: cover; border: 1px solid var(--home-border); }
+.about-img { width: 100%; max-width: 420px; max-height: 520px; border-radius: var(--radius-lg); object-fit: cover; object-position: top center; border: 1px solid var(--home-border); }
 .about-img-badge { position: absolute; bottom: 20px; left: -20px; background: var(--gold-accent); color: #000; font-weight: 700; font-size: var(--text-sm); padding: var(--space-2) var(--space-4); border-radius: var(--radius-md); box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
 .about-badge-row { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-6); }
 .about-badge { background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.25); color: var(--gold-accent); padding: 4px 12px; border-radius: var(--radius-full); font-size: var(--text-sm); font-weight: 600; }
@@ -278,10 +278,10 @@ h1, h2, h3, h4 { color: #fff; }
                 $book_img = clv_field('book_image');
                 if ($book_img) {
                     clv_img($book_img, 'Ánh Sáng Của Ước Mơ – Tác giả Vũ Kiều Loan', '', 'large',
-                        'style="width:100%;max-width:320px;border-radius:var(--radius-md);box-shadow:0 24px 60px rgba(0,0,0,0.5),0 0 40px rgba(201,168,76,0.1);display:block;margin:auto;" loading="lazy"');
+                        'style="width:100%;max-width:300px;max-height:460px;object-fit:cover;object-position:top;border-radius:var(--radius-md);box-shadow:0 24px 60px rgba(0,0,0,0.5),0 0 40px rgba(201,168,76,0.1);display:block;margin:auto;" loading="lazy"');
                 } else {
                     $fallback_book = clv_theme_img_url('home/book-mockup.png');
-                    echo '<img src="' . esc_url($fallback_book) . '" alt="Ánh Sáng Của Ước Mơ" style="width:100%;max-width:320px;border-radius:var(--radius-md);box-shadow:0 24px 60px rgba(0,0,0,0.5),0 0 40px rgba(201,168,76,0.1);display:block;margin:auto;" loading="lazy">';
+                    echo '<img src="' . esc_url($fallback_book) . '" alt="Ánh Sáng Của Ước Mơ" style="width:100%;max-width:300px;max-height:460px;object-fit:cover;object-position:top;border-radius:var(--radius-md);box-shadow:0 24px 60px rgba(0,0,0,0.5),0 0 40px rgba(201,168,76,0.1);display:block;margin:auto;" loading="lazy">';
                 }
                 ?>
             </div>
@@ -297,7 +297,7 @@ h1, h2, h3, h4 { color: #fff; }
                     <?php clv_html('book_description', null, 'Cuốn sách truyền cảm hứng về hành trình chuyển hoá từ người đi làm thuê đến người làm chủ nhà hàng.'); ?>
                 </div>
                 <p style="color:#94A3B8;margin-bottom:var(--space-6);">
-                    <?php clv_e('book_highlight', null, 'Đã truyền cảm hứng cho hơn 1.000 người trẻ trong hành trình khởi nghiệp F&B.'); ?>
+                    <?php clv_html('book_highlight', null, 'Đã truyền cảm hứng cho hơn <strong>1.000 người trẻ</strong> trong hành trình khởi nghiệp F&B.'); ?>
                 </p>
                 <div style="display:flex;gap:16px;flex-wrap:wrap;">
                     <a href="<?php echo esc_url(clv_field('book_cta_buy_url', null, '#')); ?>" class="btn-gold">

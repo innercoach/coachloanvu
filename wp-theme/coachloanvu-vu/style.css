@@ -1114,11 +1114,11 @@ body.home .section-title p {
 /* ── S1: HERO ───────────────────────────────────────────────── */
 body.home .hero {
   grid-template-columns: 1.2fr 1fr;
-  min-height: 90vh;
-  padding-top: 100px;
+  min-height: auto;
+  padding-top: 110px;
   /* offset fixed header */
   padding-block: unset;
-  padding-bottom: var(--space-20);
+  padding-bottom: var(--space-16);
 }
 
 body.home .hero-content h1 {
@@ -1142,10 +1142,13 @@ body.home .hero-img-wrap {
 }
 
 body.home .hero-img-wrap img {
-  max-height: 700px;
+  max-height: 560px;
+  width: auto;
+  max-width: 100%;
   object-fit: contain;
-  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  object-position: bottom right;
+  mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
   border-radius: 0;
 }
 
@@ -1232,7 +1235,11 @@ body.home .srv-card.c-bm h3 {
 
 /* ── S3: ABOUT ──────────────────────────────────────────────── */
 body.home .about-img-wrap img {
+  width: 100%;
   max-width: 420px;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: top center;
   border: 1px solid var(--home-border);
   aspect-ratio: unset;
   box-shadow: none;
