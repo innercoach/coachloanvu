@@ -1,0 +1,85 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "useRootPaddingAwareAlignments": false,
+    "layout": {
+      "contentSize": "1100px",
+      "wideSize": "1280px"
+    },
+    "color": {
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "palette": [
+        { "slug": "primary",    "color": "#8d1b0a", "name": "Primary" },
+        { "slug": "accent",     "color": "#ffbd59", "name": "Accent" },
+        { "slug": "gold",       "color": "#C9A84C", "name": "Gold" },
+        { "slug": "dv1",        "color": "#CC0000", "name": "Passion to Profit" },
+        { "slug": "dv2",        "color": "#E87722", "name": "Business to Freedom" },
+        { "slug": "dv3",        "color": "#C9A84C", "name": "Business Mastery" },
+        { "slug": "ink",        "color": "#1a1a1a", "name": "Ink" },
+        { "slug": "dark",       "color": "#0a0a0a", "name": "Dark" },
+        { "slug": "muted",      "color": "#94A3B8", "name": "Muted" },
+        { "slug": "surface",    "color": "#FAF7F5", "name": "Surface" },
+        { "slug": "white",      "color": "#FFFFFF", "name": "White" }
+      ]
+    },
+    "typography": {
+      "fluid": true,
+      "customFontSize": false,
+      "fontFamilies": [
+        {
+          "slug": "heading",
+          "name": "Philosopher",
+          "fontFamily": "'Philosopher', Georgia, serif"
+        },
+        {
+          "slug": "body",
+          "name": "Be Vietnam Pro",
+          "fontFamily": "'Be Vietnam Pro', system-ui, sans-serif"
+        },
+        {
+          "slug": "luxury",
+          "name": "Playfair Display",
+          "fontFamily": "'Playfair Display', Georgia, serif"
+        }
+      ],
+      "fontSizes": [
+        { "slug": "small",   "size": "0.875rem", "name": "Small" },
+        { "slug": "medium",  "size": "1rem",     "name": "Medium" },
+        { "slug": "large",   "size": "1.25rem",  "name": "Large" },
+        { "slug": "x-large", "size": "clamp(2rem, 4vw, 3rem)", "name": "Extra Large" }
+      ]
+    },
+    "spacing": {
+      "units": ["px", "rem", "%", "vw"],
+      "spacingSizes": [
+        { "slug": "20", "size": "0.5rem", "name": "Small" },
+        { "slug": "40", "size": "1rem",   "name": "Regular" },
+        { "slug": "60", "size": "2rem",   "name": "Large" },
+        { "slug": "80", "size": "4rem",   "name": "Extra Large" }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "#0a0a0a",
+      "text": "#CBD5E1"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--body)",
+      "lineHeight": "1.7"
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--heading)"
+        }
+      },
+      "link": {
+        "color": { "text": "var(--wp--preset--color--gold)" }
+      }
+    }
+  }
+}

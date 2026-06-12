@@ -69,13 +69,13 @@ add_action('wp_enqueue_scripts', function () {
     // Per-page inline CSS is injected via page templates
     // (each service page has its own <style> block kept inline for specificity)
 
-    // Main JS
+    // Main JS — deferred, in footer (non-render-blocking)
     wp_enqueue_script(
         'clv-main-js',
         get_template_directory_uri() . '/assets/js/main.js',
         [],
         $ver,
-        true  // load in footer
+        ['in_footer' => true, 'strategy' => 'defer']
     );
 
     // Pass WP data to JS if needed
@@ -84,6 +84,59 @@ add_action('wp_enqueue_scripts', function () {
         'ajaxUrl' => admin_url('admin-ajax.php'),
     ]);
 });
+
+
+/* ============================================================
+   2b. PERFORMANCE — drop unused core assets on the frontend
+   This classic theme renders zero core blocks (page content is
+   managed via custom fields), so the block-library CSS, classic
+   theme styles and global-styles inline CSS are 100% unused and
+   only add render-blocking weight. Pages content is empty so this
+   is safe.
+   ============================================================ */
+add_action('wp_enqueue_scripts', function () {
+    if (is_admin()) {
+        return;
+    }
+    // ~60KB of unused block CSS + small classic/global styles
+    wp_dequeue_style('wp-block-library');
+    wp_dequeue_style('wp-block-library-theme');
+    wp_dequeue_style('wp-block-style-variations');
+    wp_dequeue_style('classic-theme-styles');
+    wp_dequeue_style('global-styles');
+    // Per-block on-demand styles / SVG duotone filters (no blocks here)
+    remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');
+    remove_action('wp_footer', 'wp_enqueue_global_styles', 1);
+    remove_action('wp_body_open', 'wp_global_styles_render_svg_filters');
+}, 100);
+
+/* Load Google Fonts without blocking render (print → all on load + noscript fallback). */
+add_filter('style_loader_tag', function ($tag, $handle) {
+    if ('clv-fonts' !== $handle) {
+        return $tag;
+    }
+    $async = str_replace("media='all'", "media='print' onload=\"this.media='all'\"", $tag);
+    return $async . '<noscript>' . $tag . '</noscript>';
+}, 10, 2);
+
+/* Preload the LCP hero image (front page + service pages) for faster paint. */
+add_action('wp_head', function () {
+    $img_id = 0;
+    if (is_front_page()) {
+        $img_id = (int) get_post_meta(get_the_ID(), 'hero_image', true);
+        $fallback = get_template_directory_uri() . '/assets/images/dv3/hero-coach.png';
+    } else {
+        return; // service pages set their own hero via templates
+    }
+    if ($img_id) {
+        $url = wp_get_attachment_image_url($img_id, 'full');
+    } else {
+        $url = $fallback ?? '';
+    }
+    if ($url) {
+        printf('<link rel="preload" as="image" href="%s" fetchpriority="high">' . "\n", esc_url($url));
+    }
+}, 1);
 
 
 /* ============================================================
