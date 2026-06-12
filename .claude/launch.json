@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "wp",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": ["/c", "echo", "docker-already-running"],
+      "port": 8090
+    }
+  ]
+}
