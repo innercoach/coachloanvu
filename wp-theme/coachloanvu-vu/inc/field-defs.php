@@ -196,6 +196,44 @@ function clv_field_groups(): array {
             ['title' => 'DV2 · Người đồng hành', 'fields' => [
                 'dv2_instructor_image' => ['label' => 'Ảnh giảng viên', 'type' => 'image'],
             ]],
+            ['title' => 'DV2 · Đối tượng', 'fields' => [
+                'dv2_targets' => ['label' => 'Đối tượng', 'type' => 'repeater', 'subfields' => [
+                    'target_title'       => ['label' => 'Tiêu đề', 'type' => 'text'],
+                    'target_description' => ['label' => 'Mô tả (cho phép <strong>)', 'type' => 'textarea'],
+                ]],
+            ]],
+            ['title' => 'DV2 · 3 giá trị', 'fields' => [
+                'dv2_benefits' => ['label' => 'Giá trị (M/M/F)', 'type' => 'repeater', 'subfields' => [
+                    'benefit_letter'      => ['label' => 'Chữ cái', 'type' => 'text'],
+                    'benefit_title'       => ['label' => 'Tiêu đề', 'type' => 'text'],
+                    'benefit_description' => ['label' => 'Mô tả', 'type' => 'textarea'],
+                ]],
+            ]],
+            ['title' => 'DV2 · Khác biệt & So sánh', 'fields' => [
+                'dv2_differentiators' => ['label' => 'Điểm khác biệt', 'type' => 'repeater', 'subfields' => [
+                    'diff_title'       => ['label' => 'Tiêu đề', 'type' => 'text'],
+                    'diff_description' => ['label' => 'Mô tả', 'type' => 'textarea'],
+                ]],
+                'dv2_compare_rows' => ['label' => 'Bảng so sánh (vs P2P)', 'type' => 'repeater', 'subfields' => [
+                    'row_label' => ['label' => 'Tiêu chí', 'type' => 'text'],
+                    'row_p2p'   => ['label' => 'P2P (2 ngày)', 'type' => 'textarea'],
+                    'row_b2f'   => ['label' => 'Business to Freedom', 'type' => 'textarea'],
+                ]],
+            ]],
+            ['title' => 'DV2 · Kết quả sau 10 tuần', 'fields' => [
+                'dv2_outcomes' => ['label' => 'Outcomes', 'type' => 'repeater', 'subfields' => [
+                    'outcome_icon'        => ['label' => 'Số/Icon', 'type' => 'text'],
+                    'outcome_title'       => ['label' => 'Tiêu đề', 'type' => 'text'],
+                    'outcome_description' => ['label' => 'Mô tả', 'type' => 'textarea'],
+                ]],
+            ]],
+            ['title' => 'DV2 · Lộ trình 10 tuần', 'fields' => [
+                'dv2_modules' => ['label' => 'Tuần học', 'type' => 'repeater', 'subfields' => [
+                    'module_week'        => ['label' => 'Tuần', 'type' => 'text'],
+                    'module_title'       => ['label' => 'Chữ P / tiêu đề', 'type' => 'text'],
+                    'module_description' => ['label' => 'Mô tả', 'type' => 'textarea'],
+                ]],
+            ]],
             ['title' => 'DV2 · FAQ', 'fields' => [
                 'dv2_faqs' => ['label' => 'FAQ', 'type' => 'repeater', 'subfields' => [
                     'faq_question' => ['label' => 'Câu hỏi', 'type' => 'text'],
@@ -228,11 +266,52 @@ function clv_field_groups(): array {
                 'dv3_sticky_title' => ['label' => 'Tiêu đề', 'type' => 'text'],
                 'dv3_sticky_meta'  => ['label' => 'Dòng phụ', 'type' => 'text'],
             ]],
+            ['title' => 'DV3 · Pain points', 'fields' => [
+                'dv3_pains' => ['label' => 'Vấn đề', 'type' => 'repeater', 'subfields' => [
+                    'pain_number'      => ['label' => 'Số', 'type' => 'text'],
+                    'pain_title'       => ['label' => 'Tiêu đề', 'type' => 'text'],
+                    'pain_description' => ['label' => 'Mô tả', 'type' => 'textarea'],
+                    'pain_full_width'  => ['label' => 'Rộng toàn hàng', 'type' => 'select', 'options' => ['' => 'Không', '1' => 'Có']],
+                ]],
+            ]],
             ['title' => 'DV3 · Đối tượng', 'fields' => [
                 'dv3_targets' => ['label' => 'Đối tượng', 'type' => 'repeater', 'subfields' => [
                     'target_icon'        => ['label' => 'Icon', 'type' => 'text'],
                     'target_title'       => ['label' => 'Tiêu đề', 'type' => 'text'],
                     'target_description' => ['label' => 'Mô tả', 'type' => 'textarea'],
+                ]],
+            ]],
+            ['title' => 'DV3 · Cách hoạt động', 'fields' => [
+                'dv3_not_like' => ['label' => 'Không giống khoá thông thường', 'type' => 'repeater', 'subfields' => [
+                    'not_text' => ['label' => 'Nội dung', 'type' => 'text'],
+                ]],
+                'dv3_you_get' => ['label' => 'Thay vào đó bạn nhận được', 'type' => 'repeater', 'subfields' => [
+                    'get_text' => ['label' => 'Nội dung', 'type' => 'text'],
+                ]],
+                'dv3_focus_badges' => ['label' => 'Tập trung vào (badges)', 'type' => 'repeater', 'subfields' => [
+                    'badge_label' => ['label' => 'Nhãn', 'type' => 'text'],
+                ]],
+                'dv3_focus_note' => ['label' => 'Ghi chú mục tiêu', 'type' => 'textarea'],
+            ]],
+            ['title' => 'DV3 · 3 giá trị', 'fields' => [
+                'dv3_values' => ['label' => 'Giá trị', 'type' => 'repeater', 'subfields' => [
+                    'value_number'      => ['label' => 'Số', 'type' => 'text'],
+                    'value_title'       => ['label' => 'Tiêu đề', 'type' => 'text'],
+                    'value_description' => ['label' => 'Mô tả', 'type' => 'textarea'],
+                ]],
+            ]],
+            ['title' => 'DV3 · Bạn nhận được gì', 'fields' => [
+                'dv3_deliverables' => ['label' => 'Deliverables', 'type' => 'repeater', 'subfields' => [
+                    'deliverable_title'       => ['label' => 'Tiêu đề (in đậm)', 'type' => 'text'],
+                    'deliverable_description' => ['label' => 'Mô tả', 'type' => 'text'],
+                ]],
+                'dv3_deliverables_note' => ['label' => 'Ghi chú', 'type' => 'textarea'],
+            ]],
+            ['title' => 'DV3 · So sánh với B2F', 'fields' => [
+                'dv3_compare_rows' => ['label' => 'Bảng so sánh', 'type' => 'repeater', 'subfields' => [
+                    'row_label' => ['label' => 'Tiêu chí', 'type' => 'text'],
+                    'row_btf'   => ['label' => 'Business to Freedom', 'type' => 'textarea'],
+                    'row_bm'    => ['label' => 'Business Mastery', 'type' => 'textarea'],
                 ]],
             ]],
             ['title' => 'DV3 · Gói dịch vụ', 'fields' => [

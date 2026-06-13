@@ -413,15 +413,8 @@ $cta_label    = clv_field('dv2_cta_label', $pid, 'ĐĂNG KÍ NGAY');
         <div class="container target-grid" style="align-items:center;">
             <div class="hero-img-wrap" data-reveal>
                 <?php
-                $inst_img_field = clv_field('dv2_instructor_image', $pid);
-                if ($inst_img_field && is_array($inst_img_field)) {
-                    $inst_img_src = $inst_img_field['url'] ?? '';
-                } else {
-                    $inst_img_src = get_template_directory_uri() . '/assets/dv1/instructor_2.jpg';
-                }
                 ?>
-                <img src="<?php echo esc_url($inst_img_src); ?>" alt="Vũ Kiều Loan" class="hero-img"
-                     style="border-radius:var(--radius-full);aspect-ratio:1;object-fit:cover;max-width:400px;border:4px solid var(--b2f-gold)">
+                <?php clv_img_f('dv2_instructor_image', $pid, 'dv1/instructor_2.jpg', 'Vũ Kiều Loan', 'hero-img', 'style="border-radius:var(--radius-full);aspect-ratio:1;object-fit:cover;max-width:400px;border:4px solid var(--b2f-gold)"'); ?>
             </div>
             <div class="hero-content" data-reveal>
                 <div class="section-header" style="text-align:left;margin-bottom:var(--space-6);">

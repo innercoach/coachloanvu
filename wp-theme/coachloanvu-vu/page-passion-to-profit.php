@@ -237,17 +237,9 @@ $cta_final    = clv_field('dv1_cta_final_label', $pid, 'Đăng ký ngay hôm nay
                 <div class="divider" style="margin-inline:auto;"></div>
             </div>
             <?php
-            $cred_img_field = clv_field('dv1_cred_image', $pid);
-            if ($cred_img_field && is_array($cred_img_field)) {
-                $cred_img_src = $cred_img_field['url'] ?? '';
-            } else {
-                $cred_img_src = get_template_directory_uri() . '/assets/dv1/instructor_1.png';
-            }
             ?>
             <div class="cred-img-wrap">
-                <img src="<?php echo esc_url($cred_img_src); ?>"
-                     alt="Vũ Kiều Loan đang giảng dạy trong không gian nhà hàng phong cách Mỹ"
-                     loading="lazy" style="width:100%;display:block;">
+                <?php clv_img_f('dv1_cred_image', $pid, 'dv1/instructor_1.png', 'Vũ Kiều Loan đang giảng dạy trong không gian nhà hàng phong cách Mỹ', '', 'loading="lazy" style="width:100%;display:block;"'); ?>
             </div>
             <div class="stats-row">
                 <?php
