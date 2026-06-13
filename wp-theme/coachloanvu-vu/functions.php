@@ -288,6 +288,46 @@ function clv_img_f(
 }
 
 
+/**
+ * Render a testimonial image with responsive srcset + lazy-load.
+ * For bundled theme images a 360w variant ({name}-360.png) is emitted as the
+ * small candidate; intrinsic width/height are added to prevent layout shift.
+ *
+ * @param string $url   Full image URL (bundled theme URL or uploaded media URL).
+ * @param string $alt   Alt text.
+ * @param string $class CSS class (default 'testi-img').
+ */
+function clv_testi_img(string $url, string $alt = '', string $class = 'testi-img'): void {
+    if (!$url) return;
+
+    $tpl_uri = get_template_directory_uri();
+    $tpl_dir = get_template_directory();
+    $w = $h = 0;
+    $srcset = '';
+
+    // Bundled theme image → derive path, dimensions and the -360 variant.
+    if (strpos($url, $tpl_uri) === 0) {
+        $path = $tpl_dir . substr($url, strlen($tpl_uri));
+        if (is_file($path)) {
+            $dim = @getimagesize($path);
+            if ($dim) { $w = (int) $dim[0]; $h = (int) $dim[1]; }
+            $small_url  = preg_replace('/(\.(png|jpe?g))$/i', '-360$1', $url);
+            $small_path = preg_replace('/(\.(png|jpe?g))$/i', '-360$1', $path);
+            if ($w && $small_path !== $path && is_file($small_path)) {
+                $srcset = esc_url($small_url) . ' 360w, ' . esc_url($url) . ' ' . $w . 'w';
+            }
+        }
+    }
+
+    $sizes = '(max-width:600px) 90vw, (max-width:1024px) 45vw, 340px';
+    $attrs  = 'class="' . esc_attr($class) . '" loading="lazy" decoding="async"';
+    if ($w && $h) $attrs .= ' width="' . $w . '" height="' . $h . '"';
+    if ($srcset)  $attrs .= ' srcset="' . $srcset . '" sizes="' . $sizes . '"';
+
+    echo '<img src="' . esc_url($url) . '" alt="' . esc_attr($alt) . '" ' . $attrs . '>';
+}
+
+
 /* ============================================================
    6. NAV ACTIVE CLASS FIX
    Add 'active' class alongside WP's 'current-menu-item'.

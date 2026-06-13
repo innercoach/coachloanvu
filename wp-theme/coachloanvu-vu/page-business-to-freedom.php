@@ -392,11 +392,7 @@ $cta_label    = clv_field('dv2_cta_label', $pid, 'ĐĂNG KÍ NGAY');
                     $img_src = is_array($img_val) ? ($img_val['url'] ?? '') : ($img_val ?: ''); ?>
                 <div class="b2f-card" data-reveal>
                     <div class="testi-img-wrap">
-                        <?php if ($img_src): ?>
-                        <img src="<?php echo esc_url($img_src); ?>"
-                             alt="<?php echo esc_attr($t['testi_name'] ?? ''); ?>"
-                             class="testi-img" loading="lazy">
-                        <?php endif; ?>
+                        <?php if ($img_src) clv_testi_img($img_src, $t['testi_name'] ?? ''); ?>
                     </div>
                     <p class="testi-name" style="font-family:var(--font-heading);font-size:var(--text-lg);color:var(--b2f-orange);margin-bottom:0;"><?php echo esc_html($t['testi_name'] ?? ''); ?></p>
                     <p style="font-size:var(--text-xs);color:rgba(255,255,255,0.5);margin-bottom:var(--space-3);"><?php echo esc_html($t['testi_location'] ?? ''); ?></p>

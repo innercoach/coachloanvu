@@ -385,11 +385,7 @@ $cta_final    = clv_field('dv1_cta_final_label', $pid, 'Đăng ký ngay hôm nay
                 ?>
                 <div class="testi-card" data-reveal>
                     <div class="testi-img-wrap">
-                        <?php if ($img_src): ?>
-                        <img src="<?php echo esc_url($img_src); ?>"
-                             alt="<?php echo esc_attr($t['testi_name'] ?? ''); ?>"
-                             class="testi-img" loading="lazy">
-                        <?php endif; ?>
+                        <?php if ($img_src) clv_testi_img($img_src, $t['testi_name'] ?? ''); ?>
                     </div>
                     <div class="testi-body">
                         <p class="testi-name"><?php echo esc_html($t['testi_name'] ?? ''); ?></p>
